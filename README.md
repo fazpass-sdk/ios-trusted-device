@@ -1,2 +1,2 @@
 # ios-trusted-device
-test
+test push
