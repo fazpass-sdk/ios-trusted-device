@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Finance_App" customModuleProvider="target">
+            <connections>
+                <outlet property="descLabel" destination="jWA-fZ-Vvg" id="rSC-eL-9i5"/>
+                <outlet property="illustrationImage" destination="TWz-X8-aY4" id="ZdA-nA-tGv"/>
+                <outlet property="nextButton" destination="Aqa-Ip-cPA" id="DAf-RT-VJw"/>
+                <outlet property="phoneEmailTextfield" destination="fS4-89-ApI" id="4Ye-cd-M61"/>
+                <outlet property="titlelLabel" destination="c5l-BX-Zcq" id="QVu-US-p66"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqa-Ip-cPA">
+                    <rect key="frame" x="24" y="698" width="345" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="4Yi-ly-Uwj"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Next Button"/>
+                    <connections>
+                        <action selector="nextButtonTapped:" destination="-1" eventType="touchUpInside" id="4lc-jw-kxt"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone Number or Email ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-89-ApI">
+                    <rect key="frame" x="24" y="618" width="345" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ndC-a1-f35"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5l-BX-Zcq">
+                    <rect key="frame" x="24" y="533.33333333333337" width="345" height="20.333333333333371"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWA-fZ-Vvg">
+                    <rect key="frame" x="24" y="568.66666666666663" width="345" height="14.333333333333371"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TWz-X8-aY4">
+                    <rect key="frame" x="24" y="79" width="345" height="345"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TWz-X8-aY4" secondAttribute="height" multiplier="1:1" id="iUd-IL-sKa"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jWA-fZ-Vvg" secondAttribute="trailing" constant="24" id="5up-t5-4bt"/>
+                <constraint firstItem="fS4-89-ApI" firstAttribute="top" secondItem="jWA-fZ-Vvg" secondAttribute="bottom" constant="35" id="80R-8D-Gw7"/>
+                <constraint firstItem="TWz-X8-aY4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="DId-iF-5Q8"/>
+                <constraint firstItem="fS4-89-ApI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="GQE-KE-8AQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Aqa-Ip-cPA" secondAttribute="bottom" constant="60" id="ZPv-V0-p6f"/>
+                <constraint firstItem="Aqa-Ip-cPA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="auY-pk-hNT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TWz-X8-aY4" secondAttribute="trailing" constant="24" id="ch4-t6-LO5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Aqa-Ip-cPA" secondAttribute="trailing" constant="24" id="i34-dC-gfl"/>
+                <constraint firstItem="Aqa-Ip-cPA" firstAttribute="top" secondItem="fS4-89-ApI" secondAttribute="bottom" constant="30" id="nmB-TZ-5hF"/>
+                <constraint firstItem="c5l-BX-Zcq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="o34-li-l0P"/>
+                <constraint firstItem="jWA-fZ-Vvg" firstAttribute="top" secondItem="c5l-BX-Zcq" secondAttribute="bottom" constant="15" id="oXU-Ho-0vr"/>
+                <constraint firstItem="TWz-X8-aY4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="opc-Q7-ImI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c5l-BX-Zcq" secondAttribute="trailing" constant="24" id="pq8-ZD-3yy"/>
+                <constraint firstItem="jWA-fZ-Vvg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="yHI-WK-Spk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fS4-89-ApI" secondAttribute="trailing" constant="24" id="zHz-tz-RTP"/>
+            </constraints>
+            <point key="canvasLocation" x="-22" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

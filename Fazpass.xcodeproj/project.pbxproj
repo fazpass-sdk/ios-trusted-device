@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F1683BD929A0ECAC00A38C28 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1683BD829A0ECAC00A38C28 /* PushNotificationManager.swift */; };
+		F1C1AF55298BD8DF00F365DF /* Fazpass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C1AF4B298BD8DF00F365DF /* Fazpass.framework */; };
+		F1C1AF5A298BD8DF00F365DF /* FazpassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1AF59298BD8DF00F365DF /* FazpassTests.swift */; };
+		F1C1B004298BEE9700F365DF /* Fazpass.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F1C1B002298BEE9700F365DF /* Fazpass.podspec */; };
+		F1C1B00F298BEED500F365DF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B007298BEED500F365DF /* NetworkService.swift */; };
+		F1C1B010298BEED500F365DF /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B008298BEED500F365DF /* Requests.swift */; };
+		F1C1B011298BEED500F365DF /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B009298BEED500F365DF /* ErrorResponse.swift */; };
+		F1C1B012298BEED500F365DF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B00A298BEED500F365DF /* Services.swift */; };
+		F1C1B013298BEED500F365DF /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B00B298BEED500F365DF /* Responses.swift */; };
+		F1C1B014298BEED500F365DF /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B00C298BEED500F365DF /* Parameters.swift */; };
+		F1C1B015298BEED500F365DF /* Usecases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B00D298BEED500F365DF /* Usecases.swift */; };
+		F1C1B016298BEED500F365DF /* MicroservicePaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B00E298BEED500F365DF /* MicroservicePaths.swift */; };
+		F1C1B01B298BEEFE00F365DF /* Fazpass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B018298BEEFE00F365DF /* Fazpass.swift */; };
+		F1C1B01C298BEEFE00F365DF /* TrustedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B019298BEEFE00F365DF /* TrustedDevice.swift */; };
+		F1C1B01D298BEEFE00F365DF /* FazpassContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B01A298BEEFE00F365DF /* FazpassContext.swift */; };
+		F1C1B027298BEF2300F365DF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B01F298BEF2300F365DF /* Constant.swift */; };
+		F1C1B028298BEF2300F365DF /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B020298BEF2300F365DF /* ContactManager.swift */; };
+		F1C1B029298BEF2300F365DF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B021298BEF2300F365DF /* LocationManager.swift */; };
+		F1C1B02A298BEF2300F365DF /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B022298BEF2300F365DF /* Permission.swift */; };
+		F1C1B02B298BEF2300F365DF /* SwiftyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B023298BEF2300F365DF /* SwiftyJson.swift */; };
+		F1C1B02C298BEF2300F365DF /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B024298BEF2300F365DF /* Device.swift */; };
+		F1C1B02D298BEF2300F365DF /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B025298BEF2300F365DF /* Utilities.swift */; };
+		F1C1B02E298BEF2300F365DF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B026298BEF2300F365DF /* Extensions.swift */; };
+		F1C1B030298BEF2F00F365DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B02F298BEF2F00F365DF /* User.swift */; };
+		F1CBABB829A32227007D0649 /* BiometryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBABB729A32227007D0649 /* BiometryManager.swift */; };
+		F1E0B111299B927E0029E743 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F1E0B110299B927E0029E743 /* FirebaseAnalytics */; };
+		F1E0B113299B927E0029E743 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = F1E0B112299B927E0029E743 /* FirebaseMessaging */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F1C1AF56298BD8DF00F365DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1C1AF27298BD8C300F365DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1C1AF4A298BD8DF00F365DF;
+			remoteInfo = Fazpass;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F1683BD829A0ECAC00A38C28 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		F1C1AF4B298BD8DF00F365DF /* Fazpass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fazpass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1C1AF54298BD8DF00F365DF /* FazpassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FazpassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1C1AF59298BD8DF00F365DF /* FazpassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FazpassTests.swift; sourceTree = "<group>"; };
+		F1C1B002298BEE9700F365DF /* Fazpass.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fazpass.podspec; sourceTree = SOURCE_ROOT; };
+		F1C1B003298BEE9700F365DF /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
+		F1C1B007298BEED500F365DF /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = Fazpass/Sources/NetworkService.swift; sourceTree = SOURCE_ROOT; };
+		F1C1B008298BEED500F365DF /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requests.swift; path = Fazpass/Sources/Requests.swift; sourceTree = SOURCE_ROOT; };
+		F1C1B009298BEED500F365DF /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorResponse.swift; path = Fazpass/Sources/ErrorResponse.swift; sourceTree = SOURCE_ROOT; };
+		F1C1B00A298BEED500F365DF /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Services.swift; path = Fazpass/Sources/Services.swift; sourceTree = SOURCE_ROOT; };
+		F1C1B00B298BEED500F365DF /* Responses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Responses.swift; path = Fazpass/Sources/Responses.swift; sourceTree = SOURCE_ROOT; };
+		F1C1B00C298BEED500F365DF /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parameters.swift; path = Fazpass/Sources/Parameters.swift; sourceTree = SOURCE_ROOT; };
+		F1C1B00D298BEED500F365DF /* Usecases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usecases.swift; path = Fazpass/Sources/Usecases.swift; sourceTree = SOURCE_ROOT; };
+		F1C1B00E298BEED500F365DF /* MicroservicePaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MicroservicePaths.swift; path = Fazpass/Sources/MicroservicePaths.swift; sourceTree = SOURCE_ROOT; };
+		F1C1B018298BEEFE00F365DF /* Fazpass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fazpass.swift; path = Sources/Fazpass.swift; sourceTree = "<group>"; };
+		F1C1B019298BEEFE00F365DF /* TrustedDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrustedDevice.swift; path = Sources/TrustedDevice.swift; sourceTree = "<group>"; };
+		F1C1B01A298BEEFE00F365DF /* FazpassContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FazpassContext.swift; path = Sources/FazpassContext.swift; sourceTree = "<group>"; };
+		F1C1B01F298BEF2300F365DF /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = Sources/Constant.swift; sourceTree = "<group>"; };
+		F1C1B020298BEF2300F365DF /* ContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactManager.swift; path = Sources/ContactManager.swift; sourceTree = "<group>"; };
+		F1C1B021298BEF2300F365DF /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Sources/LocationManager.swift; sourceTree = "<group>"; };
+		F1C1B022298BEF2300F365DF /* Permission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Permission.swift; path = Sources/Permission.swift; sourceTree = "<group>"; };
+		F1C1B023298BEF2300F365DF /* SwiftyJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJson.swift; path = Sources/SwiftyJson.swift; sourceTree = "<group>"; };
+		F1C1B024298BEF2300F365DF /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Sources/Device.swift; sourceTree = "<group>"; };
+		F1C1B025298BEF2300F365DF /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = Sources/Utilities.swift; sourceTree = "<group>"; };
+		F1C1B026298BEF2300F365DF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/Extensions.swift; sourceTree = "<group>"; };
+		F1C1B02F298BEF2F00F365DF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Sources/User.swift; sourceTree = "<group>"; };
+		F1CBABB729A32227007D0649 /* BiometryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1C1AF48298BD8DF00F365DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1E0B113299B927E0029E743 /* FirebaseMessaging in Frameworks */,
+				F1E0B111299B927E0029E743 /* FirebaseAnalytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1C1AF51298BD8DF00F365DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C1AF55298BD8DF00F365DF /* Fazpass.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F1C1AF26298BD8C300F365DF = {
+			isa = PBXGroup;
+			children = (
+				F1C1AF4C298BD8DF00F365DF /* Fazpass */,
+				F1C1AF58298BD8DF00F365DF /* FazpassTests */,
+				F1C1AF30298BD8C300F365DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F1C1AF30298BD8C300F365DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1C1AF4B298BD8DF00F365DF /* Fazpass.framework */,
+				F1C1AF54298BD8DF00F365DF /* FazpassTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1C1AF4C298BD8DF00F365DF /* Fazpass */ = {
+			isa = PBXGroup;
+			children = (
+				F1C1B01E298BEF0300F365DF /* Utilities */,
+				F1C1B017298BEEE800F365DF /* Features */,
+				F1C1B006298BEEA200F365DF /* Cores */,
+				F1C1B001298BEE7000F365DF /* Deployment */,
+			);
+			path = Fazpass;
+			sourceTree = "<group>";
+		};
+		F1C1AF58298BD8DF00F365DF /* FazpassTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1C1AF59298BD8DF00F365DF /* FazpassTests.swift */,
+			);
+			path = FazpassTests;
+			sourceTree = "<group>";
+		};
+		F1C1B001298BEE7000F365DF /* Deployment */ = {
+			isa = PBXGroup;
+			children = (
+				F1C1B002298BEE9700F365DF /* Fazpass.podspec */,
+				F1C1B003298BEE9700F365DF /* Package.swift */,
+			);
+			name = Deployment;
+			sourceTree = "<group>";
+		};
+		F1C1B006298BEEA200F365DF /* Cores */ = {
+			isa = PBXGroup;
+			children = (
+				F1C1B009298BEED500F365DF /* ErrorResponse.swift */,
+				F1C1B00E298BEED500F365DF /* MicroservicePaths.swift */,
+				F1C1B007298BEED500F365DF /* NetworkService.swift */,
+				F1C1B00C298BEED500F365DF /* Parameters.swift */,
+				F1C1B008298BEED500F365DF /* Requests.swift */,
+				F1C1B00B298BEED500F365DF /* Responses.swift */,
+				F1C1B00A298BEED500F365DF /* Services.swift */,
+				F1C1B00D298BEED500F365DF /* Usecases.swift */,
+			);
+			name = Cores;
+			sourceTree = "<group>";
+		};
+		F1C1B017298BEEE800F365DF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F1C1B02F298BEF2F00F365DF /* User.swift */,
+				F1C1B018298BEEFE00F365DF /* Fazpass.swift */,
+				F1C1B01A298BEEFE00F365DF /* FazpassContext.swift */,
+				F1C1B019298BEEFE00F365DF /* TrustedDevice.swift */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		F1C1B01E298BEF0300F365DF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F1C1B01F298BEF2300F365DF /* Constant.swift */,
+				F1C1B020298BEF2300F365DF /* ContactManager.swift */,
+				F1C1B024298BEF2300F365DF /* Device.swift */,
+				F1C1B026298BEF2300F365DF /* Extensions.swift */,
+				F1C1B021298BEF2300F365DF /* LocationManager.swift */,
+				F1C1B022298BEF2300F365DF /* Permission.swift */,
+				F1C1B023298BEF2300F365DF /* SwiftyJson.swift */,
+				F1C1B025298BEF2300F365DF /* Utilities.swift */,
+				F1683BD829A0ECAC00A38C28 /* PushNotificationManager.swift */,
+				F1CBABB729A32227007D0649 /* BiometryManager.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F1C1AF46298BD8DF00F365DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F1C1AF4A298BD8DF00F365DF /* Fazpass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1C1AF5C298BD8DF00F365DF /* Build configuration list for PBXNativeTarget "Fazpass" */;
+			buildPhases = (
+				F1C1AF46298BD8DF00F365DF /* Headers */,
+				F1C1AF47298BD8DF00F365DF /* Sources */,
+				F1C1AF48298BD8DF00F365DF /* Frameworks */,
+				F1C1AF49298BD8DF00F365DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fazpass;
+			packageProductDependencies = (
+				F1E0B110299B927E0029E743 /* FirebaseAnalytics */,
+				F1E0B112299B927E0029E743 /* FirebaseMessaging */,
+			);
+			productName = Fazpass;
+			productReference = F1C1AF4B298BD8DF00F365DF /* Fazpass.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F1C1AF53298BD8DF00F365DF /* FazpassTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1C1AF5F298BD8DF00F365DF /* Build configuration list for PBXNativeTarget "FazpassTests" */;
+			buildPhases = (
+				F1C1AF50298BD8DF00F365DF /* Sources */,
+				F1C1AF51298BD8DF00F365DF /* Frameworks */,
+				F1C1AF52298BD8DF00F365DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1C1AF57298BD8DF00F365DF /* PBXTargetDependency */,
+			);
+			name = FazpassTests;
+			productName = FazpassTests;
+			productReference = F1C1AF54298BD8DF00F365DF /* FazpassTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1C1AF27298BD8C300F365DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					F1C1AF4A298BD8DF00F365DF = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+					F1C1AF53298BD8DF00F365DF = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = F1C1AF2A298BD8C300F365DF /* Build configuration list for PBXProject "Fazpass" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1C1AF26298BD8C300F365DF;
+			packageReferences = (
+				F1E0B10F299B927E0029E743 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = F1C1AF30298BD8C300F365DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1C1AF4A298BD8DF00F365DF /* Fazpass */,
+				F1C1AF53298BD8DF00F365DF /* FazpassTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1C1AF49298BD8DF00F365DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C1B004298BEE9700F365DF /* Fazpass.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1C1AF52298BD8DF00F365DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1C1AF47298BD8DF00F365DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1683BD929A0ECAC00A38C28 /* PushNotificationManager.swift in Sources */,
+				F1C1B028298BEF2300F365DF /* ContactManager.swift in Sources */,
+				F1C1B01D298BEEFE00F365DF /* FazpassContext.swift in Sources */,
+				F1C1B029298BEF2300F365DF /* LocationManager.swift in Sources */,
+				F1C1B02C298BEF2300F365DF /* Device.swift in Sources */,
+				F1C1B01C298BEEFE00F365DF /* TrustedDevice.swift in Sources */,
+				F1C1B02A298BEF2300F365DF /* Permission.swift in Sources */,
+				F1C1B013298BEED500F365DF /* Responses.swift in Sources */,
+				F1C1B02B298BEF2300F365DF /* SwiftyJson.swift in Sources */,
+				F1C1B014298BEED500F365DF /* Parameters.swift in Sources */,
+				F1CBABB829A32227007D0649 /* BiometryManager.swift in Sources */,
+				F1C1B012298BEED500F365DF /* Services.swift in Sources */,
+				F1C1B010298BEED500F365DF /* Requests.swift in Sources */,
+				F1C1B01B298BEEFE00F365DF /* Fazpass.swift in Sources */,
+				F1C1B00F298BEED500F365DF /* NetworkService.swift in Sources */,
+				F1C1B02D298BEF2300F365DF /* Utilities.swift in Sources */,
+				F1C1B015298BEED500F365DF /* Usecases.swift in Sources */,
+				F1C1B02E298BEF2300F365DF /* Extensions.swift in Sources */,
+				F1C1B027298BEF2300F365DF /* Constant.swift in Sources */,
+				F1C1B011298BEED500F365DF /* ErrorResponse.swift in Sources */,
+				F1C1B016298BEED500F365DF /* MicroservicePaths.swift in Sources */,
+				F1C1B030298BEF2F00F365DF /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1C1AF50298BD8DF00F365DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C1AF5A298BD8DF00F365DF /* FazpassTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1C1AF57298BD8DF00F365DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1C1AF4A298BD8DF00F365DF /* Fazpass */;
+			targetProxy = F1C1AF56298BD8DF00F365DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F1C1AF41298BD8C400F365DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F1C1AF42298BD8C400F365DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1C1AF5D298BD8DF00F365DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2U23Q8JY8R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.Fazpass;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F1C1AF5E298BD8DF00F365DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2U23Q8JY8R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.Fazpass;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F1C1AF60298BD8DF00F365DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U23Q8JY8R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.FazpassTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1C1AF61298BD8DF00F365DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U23Q8JY8R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.FazpassTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1C1AF2A298BD8C300F365DF /* Build configuration list for PBXProject "Fazpass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1C1AF41298BD8C400F365DF /* Debug */,
+				F1C1AF42298BD8C400F365DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1C1AF5C298BD8DF00F365DF /* Build configuration list for PBXNativeTarget "Fazpass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1C1AF5D298BD8DF00F365DF /* Debug */,
+				F1C1AF5E298BD8DF00F365DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1C1AF5F298BD8DF00F365DF /* Build configuration list for PBXNativeTarget "FazpassTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1C1AF60298BD8DF00F365DF /* Debug */,
+				F1C1AF61298BD8DF00F365DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1E0B10F299B927E0029E743 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1E0B110299B927E0029E743 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1E0B10F299B927E0029E743 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		F1E0B112299B927E0029E743 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1E0B10F299B927E0029E743 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F1C1AF27298BD8C300F365DF /* Project object */;
+}

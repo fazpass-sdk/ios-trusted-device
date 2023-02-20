@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandingViewController" customModule="Finance_App" customModuleProvider="target">
+            <connections>
+                <outlet property="headerEnrichmentButton" destination="vQk-Be-XAV" id="H6g-g9-SDn"/>
+                <outlet property="headerLabel" destination="qam-pr-aKW" id="7XD-pZ-gzF"/>
+                <outlet property="misscallVerificationButton" destination="DUX-Oh-tkK" id="PdR-2c-oJD"/>
+                <outlet property="smsVerificationButton" destination="2Yf-4z-a3P" id="Xuk-eU-o0n"/>
+                <outlet property="titleLabel" destination="8uF-3t-jDW" id="tfv-Vf-XHg"/>
+                <outlet property="verifyByDeviceButton" destination="wWY-yW-W1j" id="iGE-yo-aDL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="waLongVerificationButton" destination="u5p-Dt-bmY" id="ALl-nv-G24"/>
+                <outlet property="waVerificationButton" destination="gzW-b9-AY2" id="0Bn-rN-jlt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finance App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qam-pr-aKW" userLabel="Header Label">
+                    <rect key="frame" x="24" y="109" width="345" height="21.666666666666657"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uF-3t-jDW" userLabel="Title Label">
+                    <rect key="frame" x="24" y="140.66666666666666" width="345" height="14.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="345" placeholderIntrinsicHeight="200" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CgJ-M1-gd6">
+                    <rect key="frame" x="24" y="185" width="345" height="400"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWY-yW-W1j">
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="zIt-th-cEf"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Verify by Device"/>
+                            <connections>
+                                <action selector="verifyByDeviceButtonTapped:" destination="-1" eventType="touchUpInside" id="sGI-rG-YqB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQk-Be-XAV">
+                            <rect key="frame" x="0.0" y="70" width="345" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Eny-7e-nIi"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Header Erichment"/>
+                            <connections>
+                                <action selector="headerEnrichmentButtonTapped:" destination="-1" eventType="touchUpInside" id="lSc-WC-6HC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yf-4z-a3P">
+                            <rect key="frame" x="0.0" y="140" width="345" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="69O-o6-Q1Y"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="SMS Verification"/>
+                            <connections>
+                                <action selector="smsVerificationTapped:" destination="-1" eventType="touchUpInside" id="asW-J0-nXd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUX-Oh-tkK">
+                            <rect key="frame" x="0.0" y="210" width="345" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="De9-bc-rXG"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Miscall Verification"/>
+                            <connections>
+                                <action selector="misscallVerificationButtonTapped:" destination="-1" eventType="touchUpInside" id="HkU-hq-GxX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzW-b9-AY2">
+                            <rect key="frame" x="0.0" y="280" width="345" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="hWO-oC-q3i"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="WA Verification"/>
+                            <connections>
+                                <action selector="waVerificationTapped:" destination="-1" eventType="touchUpInside" id="75c-oh-Roz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5p-Dt-bmY">
+                            <rect key="frame" x="0.0" y="350" width="345" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="J2E-dj-muf"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="WA Long Verification"/>
+                            <connections>
+                                <action selector="waLongVerificationuttonTapped:" destination="-1" eventType="touchUpInside" id="BqA-sZ-ifG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qam-pr-aKW" secondAttribute="trailing" constant="24" id="2Qe-2o-48F"/>
+                <constraint firstItem="8uF-3t-jDW" firstAttribute="top" secondItem="qam-pr-aKW" secondAttribute="bottom" constant="10" id="E0H-Mp-B6J"/>
+                <constraint firstItem="CgJ-M1-gd6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="FC9-4F-3Mh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8uF-3t-jDW" secondAttribute="trailing" constant="24" id="UOd-8U-ely"/>
+                <constraint firstItem="qam-pr-aKW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="nOF-rX-BEV"/>
+                <constraint firstItem="8uF-3t-jDW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="s5c-PB-WT4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CgJ-M1-gd6" secondAttribute="trailing" constant="24" id="tYG-rJ-WOg"/>
+                <constraint firstItem="qam-pr-aKW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="yWd-vd-ny1"/>
+                <constraint firstItem="CgJ-M1-gd6" firstAttribute="top" secondItem="8uF-3t-jDW" secondAttribute="bottom" constant="30" id="zhm-kH-WTf"/>
+            </constraints>
+            <point key="canvasLocation" x="-22" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
