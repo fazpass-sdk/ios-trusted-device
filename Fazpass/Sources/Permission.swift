@@ -22,10 +22,15 @@ class Permission {
         self.biometryManager = BiometryManager()
         self.biometryManager.delegate = self
         self.locationManager.delegate = self
+        self.contactManager.delegate = self
     }
     
     func checkLocationManagerAuthorization() {
         locationManager.checkLocationManagerAuthorization()
+    }
+    
+    func fetchContacts() {
+        contactManager.fetchContacts()
     }
     
     func isJailBreak() -> Bool {
@@ -53,6 +58,12 @@ class Permission {
 extension Permission: LocationManagerProtocol {
     func getLocation(location: Location?) {
         context.location = location
+    }
+}
+
+extension Permission: ContactProtocol {
+    func getNumberOfContact(contact: Int?) {
+        context.numberOfContact = contact
     }
 }
 

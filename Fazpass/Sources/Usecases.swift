@@ -17,7 +17,7 @@ protocol UsecaseProtocol {
     func postCheck(phoneNumber: String, email: String, completion: @escaping returnGeneralResponse)
     func postEnroll(phone: String?, email: String?, pin: String?, completion: @escaping returnGeneralResponse)
     func postValidatePin(pin: String, completion: @escaping returnGeneralResponse)
-    func postRemoveDevice(pin: String, completion: @escaping returnGeneralResponse)
+    func postRemoveDevice(completion: @escaping returnGeneralResponse)
     func postOtpGenerate(phoneNumber: String, gateWay: String, completion: @escaping returnOtpResponse)
     func postOtpGenerate(email: String, gateWay: String, completion: @escaping returnOtpResponse)
     func postOtpRequest(phoneNumber: String, gateWay: String, completion: @escaping returnOtpResponse)
@@ -46,6 +46,7 @@ class Usecases: UsecaseProtocol {
         self.device = .init()
         self.context = FazpassContext.shared
         self.permission = Permission(context: context)
+        permission.checkLocationManagerAuthorization()
     }
     
     func postOtpRequest(phoneNumber: String, gateWay: String, completion: @escaping returnOtpResponse) {
@@ -175,10 +176,11 @@ class Usecases: UsecaseProtocol {
         }
     }
     
-    func postRemoveDevice(pin: String, completion: @escaping returnGeneralResponse) {
+    func postRemoveDevice(completion: @escaping returnGeneralResponse) {
         var request = TrustedDeviceRequest()
         request.userId = context.userId
         request.device = device.getDeviceName()
+        request.app = device.getPackageName()
         request.location = Location.init(lat: context.location?.lat, lng: context.location?.lng)
         request.timeZone = device.getTimeZone()
         
@@ -189,6 +191,11 @@ class Usecases: UsecaseProtocol {
         NetworkService.instance.requestObjects(c: ApiResponse<DataResponse>.self, service: service) { result in
             switch result {
             case .success(let response):
+                if response.status == false {
+                    let error = ErrorResponse(code: response.code ?? "", status: false, message: response.message ?? "")
+                    completion(.failure(.softError(error: error)))
+                    return
+                }
                 self.context.removerUserId()
                 completion(.success(response.data))
             case .failure(let error):
@@ -212,6 +219,7 @@ class Usecases: UsecaseProtocol {
             switch response {
             case .success(let checkResponse):
                 self.context.userId = checkResponse.data?.user?.id
+                self.context.checkResponse = checkResponse.data
                 completion(.success(checkResponse.data))
             case .failure(let error):
                 completion(.failure(error))
@@ -220,24 +228,26 @@ class Usecases: UsecaseProtocol {
     }
     
     func postEnroll(phone: String?, email: String?, pin: String?, completion: @escaping returnGeneralResponse) {
+        let devicesCurrent = context.checkResponse?.apps?.current
         var request = TrustedDeviceRequest()
         request.address = ""
-        request.contactCount = 0
+        request.contactCount = context.numberOfContact
         request.device = device.getDeviceName()
+        request.app = device.getPackageName()
         request.email = email
         request.phone = phone
         request.pin = pin
         request.ktp = ""
-        request.key = ""
+        request.key = context.checkResponse?.apps?.current?.key ?? ""
         request.location = Location.init(lat: context.location?.lat, lng: context.location?.lng)
-        request.meta = ""
+        request.meta = context.checkResponse?.apps?.current?.meta ?? ""
         request.name = ""
         request.notificationToken = ""
         request.sim = [Sim.init(phone: "", serial: ""), Sim.init(phone: "", serial: "")]
         request.timeZone = device.getTimeZone()
-        request.isTrusted = false
-        request.useFingerprint = false
-        request.usePin = false
+        request.isTrusted = devicesCurrent?.isTrusted ?? false
+        request.useFingerprint = devicesCurrent?.useFingerprint ?? false
+        request.usePin = devicesCurrent?.usePin ?? false
         request.isVPN = permission.isVpnConnected()
         
         let parameter = Parameters(request)
@@ -255,11 +265,13 @@ class Usecases: UsecaseProtocol {
     
     func postVerify(completion: @escaping returnGeneralResponse) {
         var request = TrustedDeviceRequest()
-        request.userId = ""
+        request.userId = context.userId
         request.device = device.getDeviceName()
-        request.app = ""
+        request.app = device.getPackageName()
         request.sim = [Sim.init(phone: "", serial: ""), Sim.init(phone: "", serial: "")]
-        request.meta = ""
+        request.meta = context.checkResponse?.apps?.current?.meta
+        request.key = context.checkResponse?.apps?.current?.key
+        request.contactCount = context.numberOfContact
         request.timeZone = device.getTimeZone()
         request.location = Location.init(lat: context.location?.lat, lng: context.location?.lng)
         
@@ -279,7 +291,7 @@ class Usecases: UsecaseProtocol {
     
     func putUpdateLastActive(completion: @escaping returnGeneralResponse) {
         var request = TrustedDeviceRequest()
-        request.userId = ""
+        request.userId = context.userId
         request.app = device.getPackageName()
         request.device = device.getDeviceName()
         request.sim = [Sim.init(phone: "", serial: ""), Sim.init(phone: "", serial: "")]
@@ -301,7 +313,7 @@ class Usecases: UsecaseProtocol {
     
     func postSendNotification(completion: @escaping returnGeneralResponse) {
         var request = NotificationRequest()
-        request.userId = ""
+        request.userId = context.userId
         request.notificationToken = ""
         request.countExpired = 0
         request.otherDevice = []
@@ -323,7 +335,7 @@ class Usecases: UsecaseProtocol {
     
     func postConfirmationStatus(completion: @escaping returnGeneralResponse) {
         var request = NotificationRequest()
-        request.userId = ""
+        request.userId = context.userId
         request.notificationToken = ""
         request.app = device.getPackageName()
         request.device = device.getDeviceName()
@@ -345,7 +357,7 @@ class Usecases: UsecaseProtocol {
     
     func putUpdateExpire(completion: @escaping returnGeneralResponse) {
         var request = NotificationRequest()
-        request.userId = ""
+        request.userId = context.userId
         request.uuidNotif = ""
         
         let parameter = Parameters(request)
@@ -364,7 +376,7 @@ class Usecases: UsecaseProtocol {
     
     func putUpdateNotificationToken(completion: @escaping returnGeneralResponse) {
         var request = NotificationRequest()
-        request.userId = ""
+        request.userId = context.userId
         request.notificationToken = ""
         request.app = device.getPackageName()
         request.device = device.getDeviceName()

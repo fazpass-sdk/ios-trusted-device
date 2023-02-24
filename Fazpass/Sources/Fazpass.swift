@@ -20,14 +20,11 @@ public class Fazpass {
     
     public func initialize(_ MERCHANT_KEY: String,_ TD_MODE: TD_MODE) {
         if MERCHANT_KEY.isEmpty { print("merchant id cannot be null or empty") }
+        FazpassContext.shared.buildMode = TD_MODE.rawValue
         guard let _ = FazpassContext.shared.merchantKey else {
             FazpassContext.shared.merchantKey = MERCHANT_KEY
             return
         }
-    }
-    
-    public func removeDevice(pin: String, results: @escaping (Result<DataResponse?, FazPassError>) -> Void) {
-        Usecases.init().postRemoveDevice(pin: pin, completion: results)
     }
     
     public func requestOtpByPhone(_ phoneNumber: String,_ gateWay: String,_ results: @escaping (Results<OtpResponse?, String?, FazPassError>) -> Void) {
@@ -65,6 +62,7 @@ public class Fazpass {
     public func permissionCheck() {
         let context = FazpassContext.shared
         let permission = Permission.init(context: context)
+        permission.fetchContacts()
         permission.checkLocationManagerAuthorization()
     }
     

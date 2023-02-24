@@ -19,7 +19,7 @@ struct NetworkService {
                 headers[header.key] = header.value
             }
         }
-        var request = URLRequest(url: URL(string: Constant.baseURL+service.path)!)
+        var request = URLRequest(url: URL(string: buildUrl()+service.path)!)
         request.allHTTPHeaderFields = headers
         request.httpMethod = service.method
         request.httpBody = service.body
@@ -31,6 +31,12 @@ struct NetworkService {
             }
             let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 500
             guard let data = data else { return }
+            print("=========Request==========")
+            print(JSON(service.body ?? .init()))
+            print("=======END Request========")
+            print("=========Response=========")
+            print(JSON(data))
+            print("=======END Response=======")
             switch statusCode {
             case 200...299:
                 do {
@@ -76,5 +82,11 @@ struct NetworkService {
                 }
             }
         }
+    }
+    
+    func buildUrl() -> String {
+        let buildMode = FazpassContext.shared.buildMode
+        let tdMode = TD_MODE.init(rawValue: buildMode ?? "") ?? .DEV
+        return tdMode.baseUrlAs
     }
 }

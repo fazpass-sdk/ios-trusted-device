@@ -15,15 +15,15 @@ public struct ApiResponse<C: Codable>: Codable {
 
 // MARK: - DataClass
 public struct DataResponse: Codable {
-    let user: UserResponse?
-    let apps: Apps?
+    public let user: UserResponse?
+    public let apps: Apps?
 }
 
 // MARK: - Apps
 public struct Apps: Codable {
-    let current: Current?
-    let others: [Other]?
-    let crossApp: Bool?
+    public let current: Current?
+    public let others: [Other]?
+    public let crossApp: Bool?
     enum CodingKeys: String, CodingKey {
         case current, others
         case crossApp = "cross_app"
@@ -32,8 +32,8 @@ public struct Apps: Codable {
 
 // MARK: - Current
 public struct Current: Codable {
-    let meta, key: String?
-    let isTrusted, useFingerprint, usePin: Bool?
+    public let meta, key: String?
+    public let isTrusted, useFingerprint, usePin: Bool?
     enum CodingKeys: String, CodingKey {
         case meta, key
         case isTrusted = "is_trusted"
@@ -43,8 +43,8 @@ public struct Current: Codable {
 }
 
 public struct Other: Codable {
-    let app, device: String?
-    let isTrusted, useFingerprint, usePin: Bool?
+    public let app, device: String?
+    public let isTrusted, useFingerprint, usePin: Bool?
 
     enum CodingKeys: String, CodingKey {
         case app, device

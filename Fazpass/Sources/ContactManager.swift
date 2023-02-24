@@ -8,10 +8,19 @@
 import Foundation
 import Contacts
 
+protocol ContactProtocol {
+    func getNumberOfContact(contact: Int?)
+}
+
 class ContactManager {
     
     let store = CNContactStore()
-    
+    var delegate: ContactProtocol?
+    var contacts: Int = 0 {
+        didSet {
+            self.delegate?.getNumberOfContact(contact: contacts)
+        }
+    }
     func getAccessContact() {
         switch CNContactStore.authorizationStatus(for: .contacts) {
         case .authorized:
@@ -48,19 +57,15 @@ class ContactManager {
     func fetchContacts() {
         let keysToFetch = [CNContactPhoneNumbersKey]
         let fetchRequest = CNContactFetchRequest(keysToFetch: keysToFetch as [CNKeyDescriptor])
-        do {
-            try store.enumerateContacts(with: fetchRequest) { contact, stop in
-//                for phoneNumber in contact.phoneNumbers {
-//                    let label = phoneNumber.label
-//                    let value = phoneNumber.value.stringValue
-//                    print("\(label): \(value)")
-//                }
-                print(contact.phoneNumbers.count)
+        DispatchQueue.global(qos: .userInitiated).async {
+            do {
+                try self.store.enumerateContacts(with: fetchRequest) { contact, stop in
+                    self.contacts += 1
+                }
+            } catch {
+                print("Error fetching phone numbers: \(error)")
             }
-        } catch {
-            print("Error fetching phone numbers: \(error)")
         }
-        // You can now access the phone numbers of the user's contacts using the `contacts` array.
     }
     
     func fetchAndFormatContactNames(from store: CNContactStore) {

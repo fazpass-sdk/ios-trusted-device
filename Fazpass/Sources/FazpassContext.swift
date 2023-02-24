@@ -13,8 +13,11 @@ class FazpassContext {
     private let merchantKeyString = "MERCHANTKEY"
     private let carrierNumberString = "CARRIERNUMBER"
     private let userIdString = "USER_ID"
+    private let trustedDeviceUrl = "TRUSTED_DEVICE_URL"
     static let shared = FazpassContext()
     
+    var numberOfContact: Int?
+    var checkResponse: DataResponse?
     var location: Location?
     
     var merchantKey: String? {
@@ -22,6 +25,14 @@ class FazpassContext {
             return userDefault.string(forKey: merchantKeyString)
         } set {
             userDefault.set(newValue, forKey: merchantKeyString)
+        }
+    }
+    
+    var buildMode: String? {
+        get {
+            return userDefault.string(forKey: trustedDeviceUrl)
+        } set {
+            userDefault.set(newValue, forKey: trustedDeviceUrl)
         }
     }
     

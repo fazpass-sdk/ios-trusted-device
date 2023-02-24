@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
         nextButton.layer.cornerRadius = 10
         nextButton.backgroundColor = #colorLiteral(red: 0.9540299773, green: 0.1715227365, blue: 0.2805242538, alpha: 1)
         nextButton.setTitleColor(.white, for: .normal)
+        phoneEmailTextfield.delegate = self
     }
     
     func setupData(title: String, subTitle: String, image: String) {
@@ -42,5 +43,11 @@ class LoginViewController: UIViewController {
             return
         }
         onClickNextButton?(phoneEmail)
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 }

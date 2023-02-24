@@ -6,14 +6,15 @@
 //
 
 import UIKit
-//import Fazpass
+import Fazpass
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        Fazpass.initialize("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWVyIjozNn0.mfny8amysdJQYlCrUlYeA-u4EG1Dw9_nwotOl-0XuQ8", .DEV)
+        Fazpass.shared.initialize(SecretConstant.merchantKey, .DEV)
+        Fazpass.shared.permissionCheck()
         return true
     }
 

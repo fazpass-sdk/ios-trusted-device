@@ -31,7 +31,7 @@ extension UIViewController {
         greyView.addSubview(activityIndicator)
     }
     
-    func dismissLoadingVIew(in uview: UIView) {
+    func dismissLoadingView(in uview: UIView) {
         uview.removeFromSuperview()
     }
 }

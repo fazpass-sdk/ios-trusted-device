@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>153172170068-qfr8g75odf8e6pv456o66iuhbtj04hml.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.153172170068-qfr8g75odf8e6pv456o66iuhbtj04hml</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCzAYQF7tqvpn8ZOGvtMfYLP7nTEwl8Cmw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>153172170068</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.personal.Fazpass</string>
+	<key>PROJECT_ID</key>
+	<string>fazpass-7ffdd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fazpass-7ffdd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:153172170068:ios:7bdb56b0159d80815aa4c1</string>
+</dict>
+</plist>

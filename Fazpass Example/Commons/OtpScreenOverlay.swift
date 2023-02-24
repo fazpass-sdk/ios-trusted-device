@@ -17,7 +17,7 @@ class OtpScreenOverlay: UIView {
     @IBOutlet weak var forgotLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var illustrationImage: UIImageView!
-    private var otpText: String?
+    private var otpString: String?
     var onNextButtonTapped: ((String?) -> Void)?
     
     override init(frame: CGRect) {
@@ -49,25 +49,31 @@ class OtpScreenOverlay: UIView {
         nextButton.setTitleColor(.white, for: .normal)
         
         otpView.dpOTPViewDelegate = self
-        
+        let tapGesure = UITapGestureRecognizer(target: self, action: #selector(contentViewTapped))
+        contentView.addGestureRecognizer(tapGesure)
         descLabel.text = ""
     }
+    
+    @objc func contentViewTapped() {
+        self.endEditing(true)
+    }
+    
     @IBAction func closeButtonTapped(_ sender: UIButton) {
         self.removeFromSuperview()
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        onNextButtonTapped?(otpText)
+        onNextButtonTapped?(otpString)
     }
 }
 
 extension OtpScreenOverlay: DPOTPViewDelegate {
     func dpOTPViewAddText(_ text: String, at position: Int) {
-        otpText = text
+        otpString = text
     }
     
     func dpOTPViewRemoveText(_ text: String, at position: Int) {
-        otpText = text
+        otpString = text
     }
     
     func dpOTPViewChangePositionAt(_ position: Int) {
