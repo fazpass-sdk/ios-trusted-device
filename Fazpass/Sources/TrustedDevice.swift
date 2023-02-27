@@ -39,4 +39,20 @@ public class TrustedDevice {
             }
         }
     }
+    
+    public func sendNotif(countExpired: Int, notificationToken: String, results: @escaping (Result<DataResponse?, FazPassError>) -> Void) {
+        usecase.postSendNotification(countExpired: countExpired, notificationToken: notificationToken, completion: results)
+    }
+    
+    public func notifConfirmation(notificationToken: String, isConfirmation: String, results: @escaping (Result<DataResponse?, FazPassError>) -> Void) {
+        usecase.postConfirmationStatus(notificationToken: notificationToken, isConfirmation: isConfirmation, completion: results)
+    }
+    
+    public func updateExpire(results: @escaping (Result<DataResponse?, FazPassError>) -> Void) {
+        usecase.putUpdateExpire(completion: results)
+    }
+    
+    public func updateNotification(notificationToken: String, results: @escaping (Result<DataResponse?, FazPassError>) -> Void) {
+        usecase.putUpdateNotificationToken(notificationToken: notificationToken, completion: results)
+    }
 }

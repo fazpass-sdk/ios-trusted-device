@@ -68,7 +68,7 @@ extension MicroservicePaths {
         case .postRemove:
             return Constant.version + Constant.applicationContext + "remove"
         case .postNotification:
-            return Constant.version + Constant.applicationContext + "notification"
+            return Constant.version + Constant.applicationContext + "send/notification"
         case .postConfirmStatus:
             return Constant.version + Constant.applicationContext + "confirmation/status"
         case .postValidatePin:

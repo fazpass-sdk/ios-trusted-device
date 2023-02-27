@@ -127,7 +127,8 @@ class ViewController: UIViewController {
                 self.removeDevice(view: landingView.view)
             case .validate:
                 self.verifyDevice(view: landingView.view)
-            default: break
+            case .crossDevice:
+                self.crossDevice(view: landingView.view)
             }
         }
         self.navigationController?.pushViewController(landingView, animated: true)
@@ -263,6 +264,20 @@ extension ViewController {
                 let trustedStatus = "Trusted Device: \(response?.apps?.current?.isTrusted ?? false) \n"
                 let crossStatus = "Cross Device: \(response?.apps?.crossApp ?? false)"
                 self.showAlert(title: "Status", message: trustedStatus + crossStatus, in: self)
+            case .failure(let error):
+                self.dismissLoadingView(in: view.subviews.last ?? UIView())
+                self.showAlert(title: "Error", message: error.message, in: self)
+            }
+        }
+    }
+    
+    func crossDevice(view: UIView) {
+        showLoadingView(in: view)
+        trustedDevice.sendNotif(countExpired: 30, notificationToken: "") { result in
+            switch result {
+            case .success:
+                self.dismissLoadingView(in: view.subviews.last ?? UIView())
+                self.showAlert(title: "Status", message: "Success", in: self)
             case .failure(let error):
                 self.dismissLoadingView(in: view.subviews.last ?? UIView())
                 self.showAlert(title: "Error", message: error.message, in: self)

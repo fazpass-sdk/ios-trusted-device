@@ -28,10 +28,10 @@ protocol UsecaseProtocol {
     func postVerificationOtp(otp: String, otpId: String, completion: @escaping (Result<Bool, FazPassError>) -> Void)
     func postVerify(completion: @escaping returnGeneralResponse)
     func putUpdateLastActive(completion: @escaping returnGeneralResponse)
-    func postSendNotification(completion: @escaping returnGeneralResponse)
-    func postConfirmationStatus(completion: @escaping returnGeneralResponse)
+    func postSendNotification(countExpired: Int, notificationToken: String, completion: @escaping returnGeneralResponse)
+    func postConfirmationStatus(notificationToken: String, isConfirmation: String, completion: @escaping returnGeneralResponse)
     func putUpdateExpire(completion: @escaping returnGeneralResponse)
-    func putUpdateNotificationToken(completion: @escaping returnGeneralResponse)
+    func putUpdateNotificationToken(notificationToken: String, completion: @escaping returnGeneralResponse)
     func getNumber() -> String?
     func setNumber(number: String?)
 }
@@ -311,13 +311,17 @@ class Usecases: UsecaseProtocol {
         }
     }
     
-    func postSendNotification(completion: @escaping returnGeneralResponse) {
+    func postSendNotification(countExpired: Int, notificationToken: String, completion: @escaping returnGeneralResponse) {
         var request = NotificationRequest()
+        let otherDevice = context.checkResponse?.apps?.others
+        let mapToRequestOther = otherDevice?.compactMap({
+            OtherDevice(app: $0.app, device: $0.device)
+        })
         request.userId = context.userId
-        request.notificationToken = ""
-        request.countExpired = 0
-        request.otherDevice = []
-        request.uuidNotif = ""
+        request.notificationToken = notificationToken
+        request.countExpired = countExpired
+        request.otherDevice = mapToRequestOther
+        request.uuidNotif = device.getUUId()
         
         let parameter = Parameters(request)
         
@@ -333,13 +337,13 @@ class Usecases: UsecaseProtocol {
         }
     }
     
-    func postConfirmationStatus(completion: @escaping returnGeneralResponse) {
+    func postConfirmationStatus(notificationToken: String, isConfirmation: String, completion: @escaping returnGeneralResponse) {
         var request = NotificationRequest()
         request.userId = context.userId
-        request.notificationToken = ""
+        request.notificationToken = notificationToken
         request.app = device.getPackageName()
         request.device = device.getDeviceName()
-        request.isConfirmation = ""
+        request.isConfirmation = isConfirmation
         
         let parameter = Parameters(request)
         
@@ -358,7 +362,7 @@ class Usecases: UsecaseProtocol {
     func putUpdateExpire(completion: @escaping returnGeneralResponse) {
         var request = NotificationRequest()
         request.userId = context.userId
-        request.uuidNotif = ""
+        request.uuidNotif = device.getUUId()
         
         let parameter = Parameters(request)
         
@@ -374,13 +378,13 @@ class Usecases: UsecaseProtocol {
         }
     }
     
-    func putUpdateNotificationToken(completion: @escaping returnGeneralResponse) {
+    func putUpdateNotificationToken(notificationToken: String, completion: @escaping returnGeneralResponse) {
         var request = NotificationRequest()
         request.userId = context.userId
-        request.notificationToken = ""
+        request.notificationToken = notificationToken
         request.app = device.getPackageName()
         request.device = device.getDeviceName()
-        request.key = ""
+        request.key = context.checkResponse?.apps?.current?.key
         
         let parameter = Parameters(request)
         

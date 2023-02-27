@@ -24,6 +24,11 @@ class Device: NSObject {
     func getTimeZone() -> String {
         return TimeZone.current.identifier
     }
+    
+    func getUUId() -> String {
+        let uuidString = UUID().uuidString
+        return uuidString
+    }
 }
 
 struct Platform {
