@@ -13,14 +13,11 @@ class Permission {
     private var context: FazpassContext
     private var locationManager: LocationManager
     private var contactManager: ContactManager
-    private var biometryManager: BiometryManager
     
     init(context: FazpassContext) {
         self.context = context
         self.locationManager = LocationManager()
         self.contactManager = ContactManager()
-        self.biometryManager = BiometryManager()
-        self.biometryManager.delegate = self
         self.locationManager.delegate = self
         self.contactManager.delegate = self
     }
@@ -64,11 +61,5 @@ extension Permission: LocationManagerProtocol {
 extension Permission: ContactProtocol {
     func getNumberOfContact(contact: Int?) {
         context.numberOfContact = contact
-    }
-}
-
-extension Permission: Biometryprotocol {
-    func getMessage(message: String?, error: NSError?) {
-        print("\(message ?? "") \(error?.localizedDescription ?? "")")
     }
 }

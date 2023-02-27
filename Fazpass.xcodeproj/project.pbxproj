@@ -7,31 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F1683BD929A0ECAC00A38C28 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1683BD829A0ECAC00A38C28 /* PushNotificationManager.swift */; };
 		F1C1AF55298BD8DF00F365DF /* Fazpass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C1AF4B298BD8DF00F365DF /* Fazpass.framework */; };
 		F1C1AF5A298BD8DF00F365DF /* FazpassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1AF59298BD8DF00F365DF /* FazpassTests.swift */; };
 		F1C1B004298BEE9700F365DF /* Fazpass.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F1C1B002298BEE9700F365DF /* Fazpass.podspec */; };
-		F1C1B00F298BEED500F365DF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B007298BEED500F365DF /* NetworkService.swift */; };
-		F1C1B010298BEED500F365DF /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B008298BEED500F365DF /* Requests.swift */; };
-		F1C1B011298BEED500F365DF /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B009298BEED500F365DF /* ErrorResponse.swift */; };
-		F1C1B012298BEED500F365DF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B00A298BEED500F365DF /* Services.swift */; };
-		F1C1B013298BEED500F365DF /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B00B298BEED500F365DF /* Responses.swift */; };
-		F1C1B014298BEED500F365DF /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B00C298BEED500F365DF /* Parameters.swift */; };
-		F1C1B015298BEED500F365DF /* Usecases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B00D298BEED500F365DF /* Usecases.swift */; };
-		F1C1B016298BEED500F365DF /* MicroservicePaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B00E298BEED500F365DF /* MicroservicePaths.swift */; };
-		F1C1B01B298BEEFE00F365DF /* Fazpass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B018298BEEFE00F365DF /* Fazpass.swift */; };
-		F1C1B01C298BEEFE00F365DF /* TrustedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B019298BEEFE00F365DF /* TrustedDevice.swift */; };
-		F1C1B01D298BEEFE00F365DF /* FazpassContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B01A298BEEFE00F365DF /* FazpassContext.swift */; };
-		F1C1B027298BEF2300F365DF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B01F298BEF2300F365DF /* Constant.swift */; };
-		F1C1B028298BEF2300F365DF /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B020298BEF2300F365DF /* ContactManager.swift */; };
-		F1C1B029298BEF2300F365DF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B021298BEF2300F365DF /* LocationManager.swift */; };
-		F1C1B02A298BEF2300F365DF /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B022298BEF2300F365DF /* Permission.swift */; };
-		F1C1B02B298BEF2300F365DF /* SwiftyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B023298BEF2300F365DF /* SwiftyJson.swift */; };
-		F1C1B02C298BEF2300F365DF /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B024298BEF2300F365DF /* Device.swift */; };
-		F1C1B02D298BEF2300F365DF /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B025298BEF2300F365DF /* Utilities.swift */; };
-		F1C1B02E298BEF2300F365DF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B026298BEF2300F365DF /* Extensions.swift */; };
-		F1C1B030298BEF2F00F365DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1B02F298BEF2F00F365DF /* User.swift */; };
-		F1CBABB829A32227007D0649 /* BiometryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBABB729A32227007D0649 /* BiometryManager.swift */; };
+		F1CC419E29AC5F7400D49171 /* CarrierManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC419829AC5F7400D49171 /* CarrierManager.swift */; };
+		F1CC419F29AC5F7400D49171 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC419929AC5F7400D49171 /* ConnectionManager.swift */; };
+		F1CC41A029AC5F7400D49171 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC419A29AC5F7400D49171 /* PushNotificationManager.swift */; };
+		F1CC41A129AC5F7400D49171 /* BiometryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC419B29AC5F7400D49171 /* BiometryManager.swift */; };
+		F1CC41A229AC5F7400D49171 /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC419C29AC5F7400D49171 /* ContactManager.swift */; };
+		F1CC41A329AC5F7400D49171 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC419D29AC5F7400D49171 /* LocationManager.swift */; };
 		F1E0B111299B927E0029E743 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F1E0B110299B927E0029E743 /* FirebaseAnalytics */; };
 		F1E0B113299B927E0029E743 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = F1E0B112299B927E0029E743 /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
@@ -47,33 +31,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F1683BD829A0ECAC00A38C28 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		F1C1AF4B298BD8DF00F365DF /* Fazpass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fazpass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C1AF54298BD8DF00F365DF /* FazpassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FazpassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C1AF59298BD8DF00F365DF /* FazpassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FazpassTests.swift; sourceTree = "<group>"; };
 		F1C1B002298BEE9700F365DF /* Fazpass.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fazpass.podspec; sourceTree = SOURCE_ROOT; };
 		F1C1B003298BEE9700F365DF /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
-		F1C1B007298BEED500F365DF /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = Fazpass/Sources/NetworkService.swift; sourceTree = SOURCE_ROOT; };
-		F1C1B008298BEED500F365DF /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requests.swift; path = Fazpass/Sources/Requests.swift; sourceTree = SOURCE_ROOT; };
-		F1C1B009298BEED500F365DF /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorResponse.swift; path = Fazpass/Sources/ErrorResponse.swift; sourceTree = SOURCE_ROOT; };
-		F1C1B00A298BEED500F365DF /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Services.swift; path = Fazpass/Sources/Services.swift; sourceTree = SOURCE_ROOT; };
-		F1C1B00B298BEED500F365DF /* Responses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Responses.swift; path = Fazpass/Sources/Responses.swift; sourceTree = SOURCE_ROOT; };
-		F1C1B00C298BEED500F365DF /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parameters.swift; path = Fazpass/Sources/Parameters.swift; sourceTree = SOURCE_ROOT; };
-		F1C1B00D298BEED500F365DF /* Usecases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usecases.swift; path = Fazpass/Sources/Usecases.swift; sourceTree = SOURCE_ROOT; };
-		F1C1B00E298BEED500F365DF /* MicroservicePaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MicroservicePaths.swift; path = Fazpass/Sources/MicroservicePaths.swift; sourceTree = SOURCE_ROOT; };
-		F1C1B018298BEEFE00F365DF /* Fazpass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fazpass.swift; path = Sources/Fazpass.swift; sourceTree = "<group>"; };
-		F1C1B019298BEEFE00F365DF /* TrustedDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrustedDevice.swift; path = Sources/TrustedDevice.swift; sourceTree = "<group>"; };
-		F1C1B01A298BEEFE00F365DF /* FazpassContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FazpassContext.swift; path = Sources/FazpassContext.swift; sourceTree = "<group>"; };
-		F1C1B01F298BEF2300F365DF /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = Sources/Constant.swift; sourceTree = "<group>"; };
-		F1C1B020298BEF2300F365DF /* ContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactManager.swift; path = Sources/ContactManager.swift; sourceTree = "<group>"; };
-		F1C1B021298BEF2300F365DF /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Sources/LocationManager.swift; sourceTree = "<group>"; };
-		F1C1B022298BEF2300F365DF /* Permission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Permission.swift; path = Sources/Permission.swift; sourceTree = "<group>"; };
-		F1C1B023298BEF2300F365DF /* SwiftyJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJson.swift; path = Sources/SwiftyJson.swift; sourceTree = "<group>"; };
-		F1C1B024298BEF2300F365DF /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Sources/Device.swift; sourceTree = "<group>"; };
-		F1C1B025298BEF2300F365DF /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = Sources/Utilities.swift; sourceTree = "<group>"; };
-		F1C1B026298BEF2300F365DF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/Extensions.swift; sourceTree = "<group>"; };
-		F1C1B02F298BEF2F00F365DF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Sources/User.swift; sourceTree = "<group>"; };
-		F1CBABB729A32227007D0649 /* BiometryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryManager.swift; sourceTree = "<group>"; };
+		F1CC419829AC5F7400D49171 /* CarrierManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarrierManager.swift; path = Sources/CarrierManager.swift; sourceTree = "<group>"; };
+		F1CC419929AC5F7400D49171 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectionManager.swift; path = Sources/ConnectionManager.swift; sourceTree = "<group>"; };
+		F1CC419A29AC5F7400D49171 /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationManager.swift; path = Sources/PushNotificationManager.swift; sourceTree = "<group>"; };
+		F1CC419B29AC5F7400D49171 /* BiometryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BiometryManager.swift; path = Sources/BiometryManager.swift; sourceTree = "<group>"; };
+		F1CC419C29AC5F7400D49171 /* ContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactManager.swift; path = Sources/ContactManager.swift; sourceTree = "<group>"; };
+		F1CC419D29AC5F7400D49171 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Sources/LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +86,8 @@
 		F1C1AF4C298BD8DF00F365DF /* Fazpass */ = {
 			isa = PBXGroup;
 			children = (
-				F1C1B01E298BEF0300F365DF /* Utilities */,
-				F1C1B017298BEEE800F365DF /* Features */,
-				F1C1B006298BEEA200F365DF /* Cores */,
+				F1CC41A429AC5FB300D49171 /* Network */,
+				F1CC419729AC5F5800D49171 /* Manager */,
 				F1C1B001298BEE7000F365DF /* Deployment */,
 			);
 			path = Fazpass;
@@ -143,47 +110,24 @@
 			name = Deployment;
 			sourceTree = "<group>";
 		};
-		F1C1B006298BEEA200F365DF /* Cores */ = {
+		F1CC419729AC5F5800D49171 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				F1C1B009298BEED500F365DF /* ErrorResponse.swift */,
-				F1C1B00E298BEED500F365DF /* MicroservicePaths.swift */,
-				F1C1B007298BEED500F365DF /* NetworkService.swift */,
-				F1C1B00C298BEED500F365DF /* Parameters.swift */,
-				F1C1B008298BEED500F365DF /* Requests.swift */,
-				F1C1B00B298BEED500F365DF /* Responses.swift */,
-				F1C1B00A298BEED500F365DF /* Services.swift */,
-				F1C1B00D298BEED500F365DF /* Usecases.swift */,
+				F1CC419B29AC5F7400D49171 /* BiometryManager.swift */,
+				F1CC419829AC5F7400D49171 /* CarrierManager.swift */,
+				F1CC419929AC5F7400D49171 /* ConnectionManager.swift */,
+				F1CC419C29AC5F7400D49171 /* ContactManager.swift */,
+				F1CC419D29AC5F7400D49171 /* LocationManager.swift */,
+				F1CC419A29AC5F7400D49171 /* PushNotificationManager.swift */,
 			);
-			name = Cores;
+			name = Manager;
 			sourceTree = "<group>";
 		};
-		F1C1B017298BEEE800F365DF /* Features */ = {
+		F1CC41A429AC5FB300D49171 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				F1C1B02F298BEF2F00F365DF /* User.swift */,
-				F1C1B018298BEEFE00F365DF /* Fazpass.swift */,
-				F1C1B01A298BEEFE00F365DF /* FazpassContext.swift */,
-				F1C1B019298BEEFE00F365DF /* TrustedDevice.swift */,
 			);
-			name = Features;
-			sourceTree = "<group>";
-		};
-		F1C1B01E298BEF0300F365DF /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				F1C1B01F298BEF2300F365DF /* Constant.swift */,
-				F1C1B020298BEF2300F365DF /* ContactManager.swift */,
-				F1C1B024298BEF2300F365DF /* Device.swift */,
-				F1C1B026298BEF2300F365DF /* Extensions.swift */,
-				F1C1B021298BEF2300F365DF /* LocationManager.swift */,
-				F1C1B022298BEF2300F365DF /* Permission.swift */,
-				F1C1B023298BEF2300F365DF /* SwiftyJson.swift */,
-				F1C1B025298BEF2300F365DF /* Utilities.swift */,
-				F1683BD829A0ECAC00A38C28 /* PushNotificationManager.swift */,
-				F1CBABB729A32227007D0649 /* BiometryManager.swift */,
-			);
-			name = Utilities;
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,28 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1683BD929A0ECAC00A38C28 /* PushNotificationManager.swift in Sources */,
-				F1C1B028298BEF2300F365DF /* ContactManager.swift in Sources */,
-				F1C1B01D298BEEFE00F365DF /* FazpassContext.swift in Sources */,
-				F1C1B029298BEF2300F365DF /* LocationManager.swift in Sources */,
-				F1C1B02C298BEF2300F365DF /* Device.swift in Sources */,
-				F1C1B01C298BEEFE00F365DF /* TrustedDevice.swift in Sources */,
-				F1C1B02A298BEF2300F365DF /* Permission.swift in Sources */,
-				F1C1B013298BEED500F365DF /* Responses.swift in Sources */,
-				F1C1B02B298BEF2300F365DF /* SwiftyJson.swift in Sources */,
-				F1C1B014298BEED500F365DF /* Parameters.swift in Sources */,
-				F1CBABB829A32227007D0649 /* BiometryManager.swift in Sources */,
-				F1C1B012298BEED500F365DF /* Services.swift in Sources */,
-				F1C1B010298BEED500F365DF /* Requests.swift in Sources */,
-				F1C1B01B298BEEFE00F365DF /* Fazpass.swift in Sources */,
-				F1C1B00F298BEED500F365DF /* NetworkService.swift in Sources */,
-				F1C1B02D298BEF2300F365DF /* Utilities.swift in Sources */,
-				F1C1B015298BEED500F365DF /* Usecases.swift in Sources */,
-				F1C1B02E298BEF2300F365DF /* Extensions.swift in Sources */,
-				F1C1B027298BEF2300F365DF /* Constant.swift in Sources */,
-				F1C1B011298BEED500F365DF /* ErrorResponse.swift in Sources */,
-				F1C1B016298BEED500F365DF /* MicroservicePaths.swift in Sources */,
-				F1C1B030298BEF2F00F365DF /* User.swift in Sources */,
+				F1CC41A229AC5F7400D49171 /* ContactManager.swift in Sources */,
+				F1CC41A029AC5F7400D49171 /* PushNotificationManager.swift in Sources */,
+				F1CC41A329AC5F7400D49171 /* LocationManager.swift in Sources */,
+				F1CC419E29AC5F7400D49171 /* CarrierManager.swift in Sources */,
+				F1CC41A129AC5F7400D49171 /* BiometryManager.swift in Sources */,
+				F1CC419F29AC5F7400D49171 /* ConnectionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -122,7 +122,7 @@ class ViewController: UIViewController {
             case .check:
                 self.checkDevice(view: landingView.view)
             case .enrollDeviceBiometry:
-                self.showBiometry(view: landingView.view)
+                self.enrollDeviceByBiometry(view: landingView.view)
             case .remove:
                 self.removeDevice(view: landingView.view)
             case .validate:
@@ -204,7 +204,6 @@ extension ViewController {
             switch results {
             case .success:
                 self.dismissLoadingView(in: view.subviews.last ?? UIView())
-                
             case .failure(let error):
                 self.dismissLoadingView(in: view.subviews.last ?? UIView())
                 self.showAlert(title: "Error", message: error.message, in: self)
@@ -212,8 +211,18 @@ extension ViewController {
         }
     }
     
-    func validatePin(view: UIView) {
-        
+    func enrollDeviceByBiometry(view: UIView) {
+        let numberPhone = fazpass.getNumber() ?? ""
+        showLoadingView(in: view)
+        trustedDevice.enrollDeviceBiometry("", numberPhone) { results in
+            switch results {
+            case .success:
+                self.dismissLoadingView(in: view.subviews.last ?? UIView())
+            case .failure(let error):
+                self.dismissLoadingView(in: view.subviews.last ?? UIView())
+                self.showAlert(title: "Error", message: error.message, in: self)
+            }
+        }
     }
     
     func verifyDevice(view: UIView) {

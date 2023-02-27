@@ -9,9 +9,11 @@ import Foundation
 
 public class TrustedDevice {
     private var usecase: UsecaseProtocol
+    private var biometry: BiometryManager
     
     init() {
         self.usecase = Usecases.init()
+        self.biometry = BiometryManager()
     }
     
     public func checkDevice(_ email: String?,_ phone: String?, results: @escaping (Result<DataResponse?, FazPassError>) -> Void) {
@@ -26,40 +28,14 @@ public class TrustedDevice {
         usecase.postVerify(completion: results)
     }
     
-    public func enrollDeviceByPin(_ email: String?,_ phone: String?, pin: String?, results: @escaping (Result<Void, FazPassError>) -> Void) {
-        if ((email?.isEmpty == nil)) && ((phone?.isEmpty) == nil) {
-            results(.failure(.phoneOrEmailEmpty))
-            return
-        }
-        usecase.postCheck(phoneNumber: phone ?? "", email: email ?? "") { checkResults in
-            switch checkResults {
-            case .success(let response):
-                self.usecase.postEnroll(phone: phone, email: email, pin: pin) { enrollResults in
-                    switch enrollResults {
-                    case .success:
-                        results(.success(()))
-                    case .failure(let error):
-                        results(.failure(error))
-                    }
-                }
-                /*
-                let status = Status.setStatus(status: response?.apps?.current?.isTrusted)
-                if status == .trusted {
-                    self.usecase.postEnroll(phone: phone, email: email, pin: pin) { enrollResults in
-                        switch enrollResults {
-                        case .success:
-                            results(.success(()))
-                        case .failure(let error):
-                            results(.failure(error))
-                        }
-                    }
-                } else {
-                    let error = ErrorResponse.init(code: "409", status: false, message: "device untrusted")
-                    results(.failure(.softError(error: error)))
-                }
-                 */
-            case .failure(let error):
-                results(.failure(error))
+    public func enrollDeviceByPin(_ email: String?,_ phone: String?, pin: String?, results: @escaping (Result<DataResponse?, FazPassError>) -> Void) {
+        self.usecase.postEnroll(phone: phone, email: email, pin: pin, isBiometry: nil, completion: results)
+    }
+    
+    public func enrollDeviceBiometry(_ email: String?,_ phone: String?, results: @escaping (Result<DataResponse?, FazPassError>) -> Void) {
+        biometry.openBiometry { status in
+            if status {
+                self.usecase.postEnroll(phone: phone, email: email, pin: nil, isBiometry: status, completion: results)
             }
         }
     }

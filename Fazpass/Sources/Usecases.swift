@@ -15,7 +15,7 @@ typealias returnSendOtpResponse = (Result<OtpResponse?, FazPassError>) -> Void
 
 protocol UsecaseProtocol {
     func postCheck(phoneNumber: String, email: String, completion: @escaping returnGeneralResponse)
-    func postEnroll(phone: String?, email: String?, pin: String?, completion: @escaping returnGeneralResponse)
+    func postEnroll(phone: String?, email: String?, pin: String?, isBiometry: Bool?, completion: @escaping returnGeneralResponse)
     func postValidatePin(pin: String, completion: @escaping returnGeneralResponse)
     func postRemoveDevice(completion: @escaping returnGeneralResponse)
     func postOtpGenerate(phoneNumber: String, gateWay: String, completion: @escaping returnOtpResponse)
@@ -227,7 +227,7 @@ class Usecases: UsecaseProtocol {
         }
     }
     
-    func postEnroll(phone: String?, email: String?, pin: String?, completion: @escaping returnGeneralResponse) {
+    func postEnroll(phone: String?, email: String?, pin: String?, isBiometry: Bool?, completion: @escaping returnGeneralResponse) {
         let devicesCurrent = context.checkResponse?.apps?.current
         var request = TrustedDeviceRequest()
         request.address = ""
@@ -238,16 +238,16 @@ class Usecases: UsecaseProtocol {
         request.phone = phone
         request.pin = pin
         request.ktp = ""
-        request.key = context.checkResponse?.apps?.current?.key ?? ""
+        request.key = context.checkResponse?.apps?.current?.key
         request.location = Location.init(lat: context.location?.lat, lng: context.location?.lng)
-        request.meta = context.checkResponse?.apps?.current?.meta ?? ""
+        request.meta = context.checkResponse?.apps?.current?.meta
         request.name = ""
         request.notificationToken = ""
         request.sim = [Sim.init(phone: "", serial: ""), Sim.init(phone: "", serial: "")]
         request.timeZone = device.getTimeZone()
-        request.isTrusted = devicesCurrent?.isTrusted ?? false
-        request.useFingerprint = devicesCurrent?.useFingerprint ?? false
-        request.usePin = devicesCurrent?.usePin ?? false
+        request.isTrusted = devicesCurrent?.isTrusted
+        request.useFingerprint = isBiometry
+        request.usePin = isBiometry ?? false
         request.isVPN = permission.isVpnConnected()
         
         let parameter = Parameters(request)

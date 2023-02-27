@@ -35,6 +35,7 @@ struct NetworkService {
             print(JSON(service.body ?? .init()))
             print("=======END Request========")
             print("=========Response=========")
+            print("Status Code: \(statusCode)")
             print(JSON(data))
             print("=======END Response=======")
             switch statusCode {
@@ -49,7 +50,11 @@ struct NetworkService {
             case 400...499:
                 do {
                     let decoder = JSONDecoder()
-                    let response = try decoder.decode(ErrorResponse.self, from: data)
+                    let errorBody = getErrorBody(data: data)
+                    var response = try decoder.decode(ErrorResponse.self, from: data)
+                    if !errorBody.isEmpty {
+                        response.message = errorBody
+                    }
                     completion(.failure(.softError(error: response)))
                 } catch {
                     completion(.failure(.decodeError))
@@ -82,6 +87,12 @@ struct NetworkService {
                 }
             }
         }
+    }
+    
+    func getErrorBody(data: Data) -> String {
+        let json = JSON(data)
+        let errors = json["errors"]
+        return errors.map{ $0.1.stringValue }.joined(separator: "\n")
     }
     
     func buildUrl() -> String {
