@@ -11,6 +11,8 @@
 		F10D9F5529A3A61700EA3B6A /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D9F5329A3A61700EA3B6A /* PinView.swift */; };
 		F10D9F5729A3A62B00EA3B6A /* PinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F10D9F5629A3A62B00EA3B6A /* PinView.xib */; };
 		F10D9F5829A3A62B00EA3B6A /* PinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F10D9F5629A3A62B00EA3B6A /* PinView.xib */; };
+		F129500A29ADAF14009F3207 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F129500929ADAF14009F3207 /* GoogleService-Info.plist */; };
+		F129500D29ADB0DE009F3207 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F129500C29ADB0DE009F3207 /* PushNotificationManager.swift */; };
 		F17C26C9299137DE002F27F1 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C26C8299137DE002F27F1 /* HistoryTableViewCell.swift */; };
 		F17C26CD29925ABC002F27F1 /* UiImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C26CC29925ABC002F27F1 /* UiImageView+Extension.swift */; };
 		F17C26CE29925ABC002F27F1 /* UiImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C26CC29925ABC002F27F1 /* UiImageView+Extension.swift */; };
@@ -46,8 +48,6 @@
 		F1C1AF0D298BD45E00F365DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C1AF0B298BD45E00F365DF /* Main.storyboard */; };
 		F1C1AF0F298BD45F00F365DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C1AF0E298BD45F00F365DF /* Assets.xcassets */; };
 		F1C1AF12298BD45F00F365DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C1AF10298BD45F00F365DF /* LaunchScreen.storyboard */; };
-		F1E0B116299B984C0029E743 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F1E0B115299B984C0029E743 /* FirebaseAnalytics */; };
-		F1E0B118299B984C0029E743 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = F1E0B117299B984C0029E743 /* FirebaseMessaging */; };
 		F1E0B11A299BCA0B0029E743 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E0B119299BCA0B0029E743 /* Counter.swift */; };
 		F1E0B11B299BCA0B0029E743 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E0B119299BCA0B0029E743 /* Counter.swift */; };
 		F1F3B66729A3F98800789D37 /* SecretConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3B66629A3F98800789D37 /* SecretConstant.swift */; };
@@ -95,6 +95,9 @@
 /* Begin PBXFileReference section */
 		F10D9F5329A3A61700EA3B6A /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		F10D9F5629A3A62B00EA3B6A /* PinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinView.xib; sourceTree = "<group>"; };
+		F129500929ADAF14009F3207 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F129500B29ADAF7A009F3207 /* Finance App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Finance App.entitlements"; sourceTree = "<group>"; };
+		F129500C29ADB0DE009F3207 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		F17C26C8299137DE002F27F1 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		F17C26CC29925ABC002F27F1 /* UiImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiImageView+Extension.swift"; sourceTree = "<group>"; };
 		F17C26D2299260E0002F27F1 /* loading-indicator.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "loading-indicator.gif"; path = "../../../loading-indicator.gif"; sourceTree = "<group>"; };
@@ -133,8 +136,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1B3CC0C29A4AC5700F38E55 /* Fazpass.framework in Frameworks */,
-				F1E0B118299B984C0029E743 /* FirebaseMessaging in Frameworks */,
-				F1E0B116299B984C0029E743 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +180,8 @@
 		F1C1AEEC298BD21600F365DF /* Finance App */ = {
 			isa = PBXGroup;
 			children = (
+				F129500B29ADAF7A009F3207 /* Finance App.entitlements */,
+				F129500929ADAF14009F3207 /* GoogleService-Info.plist */,
 				F17C26D2299260E0002F27F1 /* loading-indicator.gif */,
 				F1C1AEED298BD21600F365DF /* AppDelegate.swift */,
 				F1C1AEEF298BD21600F365DF /* SceneDelegate.swift */,
@@ -188,6 +191,7 @@
 				F1C1AEF8298BD21700F365DF /* LaunchScreen.storyboard */,
 				F1C1AEFB298BD21700F365DF /* Info.plist */,
 				F17C26C8299137DE002F27F1 /* HistoryTableViewCell.swift */,
+				F129500C29ADB0DE009F3207 /* PushNotificationManager.swift */,
 			);
 			path = "Finance App";
 			sourceTree = "<group>";
@@ -254,8 +258,6 @@
 			);
 			name = "Finance App";
 			packageProductDependencies = (
-				F1E0B115299B984C0029E743 /* FirebaseAnalytics */,
-				F1E0B117299B984C0029E743 /* FirebaseMessaging */,
 			);
 			productName = "Finance App";
 			productReference = F1C1AEEB298BD21600F365DF /* Finance App.app */;
@@ -306,7 +308,6 @@
 			);
 			mainGroup = F1C1AEB4298BD1D300F365DF;
 			packageReferences = (
-				F1E0B114299B984C0029E743 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = F1C1AEBE298BD1D400F365DF /* Products */;
 			projectDirPath = "";
@@ -348,6 +349,7 @@
 			files = (
 				F19E97D629907D8000B53AB6 /* LandingViewController.xib in Resources */,
 				F19E97D0299071CB00B53AB6 /* LoginViewController.xib in Resources */,
+				F129500A29ADAF14009F3207 /* GoogleService-Info.plist in Resources */,
 				F1C1AEFA298BD21700F365DF /* LaunchScreen.storyboard in Resources */,
 				F1C1AEF7298BD21700F365DF /* Assets.xcassets in Resources */,
 				F17C26D3299260E0002F27F1 /* loading-indicator.gif in Resources */,
@@ -379,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F129500D29ADB0DE009F3207 /* PushNotificationManager.swift in Sources */,
 				F17C26C9299137DE002F27F1 /* HistoryTableViewCell.swift in Sources */,
 				F19E97CE299071CB00B53AB6 /* LoginViewController.swift in Sources */,
 				F10D9F5429A3A61700EA3B6A /* PinView.swift in Sources */,
@@ -510,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -564,7 +567,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -580,6 +583,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Finance App/Finance App.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -587,10 +591,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Finance App/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSContactsUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -615,6 +623,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Finance App/Finance App.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -622,10 +631,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Finance App/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSContactsUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -737,30 +750,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F1E0B114299B984C0029E743 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F1E0B115299B984C0029E743 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F1E0B114299B984C0029E743 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		F1E0B117299B984C0029E743 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F1E0B114299B984C0029E743 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1C1AEB5298BD1D300F365DF /* Project object */;
 }
