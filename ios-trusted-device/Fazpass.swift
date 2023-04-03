@@ -69,6 +69,36 @@ public class Fazpass {
     
     public func check(_ email:String, _ phone: String, _ status: @escaping(TD_STATUS, CD_STATUS)->()){
         TrustedDevice().checkDevice(email, phone) { res in
+            do{
+                let data = try res.get()
+                if(data?.user==nil && data?.apps==nil){
+                    status(TD_STATUS.UNTRUSTED, CD_STATUS.UNAVAILABLE)
+                }else{
+                    Fazpass.isUseFinger = ((data?.apps?.current?.useFingerprint) != nil)
+                    Fazpass.meta = data?.apps?.current?.meta ?? ""
+                    if(data?.apps?.others?.count ?? 0 >= 1 && data?.apps?.crossApp==true){
+                        status(TD_STATUS.TRUSTED, CD_STATUS.AVAILABLE)
+                    }else if(data?.apps?.others?.count ?? 0 < 1 && data?.apps?.crossApp==true){
+                        status(TD_STATUS.TRUSTED, CD_STATUS.UNAVAILABLE)
+                    }else if(data?.apps?.others?.count ?? 0 >= 1 && data?.apps?.crossApp==false){
+                        if(self.checkMeta(meta: data?.apps?.current?.meta ?? "")){
+                            status(TD_STATUS.TRUSTED, CD_STATUS.AVAILABLE)
+                        }else{
+                            status(TD_STATUS.UNTRUSTED, CD_STATUS.AVAILABLE)
+                        }
+                    }else{
+                        if(self.checkMeta(meta: data?.apps?.current?.meta ?? "")){
+                            status(TD_STATUS.TRUSTED, CD_STATUS.UNAVAILABLE)
+                        }else{
+                            status(TD_STATUS.UNTRUSTED, CD_STATUS.UNAVAILABLE)
+                        }
+                    }
+                }
+            }catch{
+                status(TD_STATUS.UNTRUSTED, CD_STATUS.UNAVAILABLE)
+            }
+            
+            /*
             res.map({ data in
                 if(data?.user==nil && data?.apps==nil){
                     status(TD_STATUS.UNTRUSTED, CD_STATUS.UNAVAILABLE)
@@ -95,7 +125,7 @@ public class Fazpass {
                 }
                 
             })
-            
+            */
         }
     }
     
@@ -106,7 +136,8 @@ public class Fazpass {
             }
         }else{
             TrustedDevice().validatePin(pin) { validateResult in
-                validateResult.map { response in
+                do{
+                    let response = try validateResult.get()
                     if((response?.status) != nil){
                         TrustedDevice().removeDevice() { _ in
                             TrustedDevice().enrollDeviceByPin(email, phone, pin: pin) { _ in
@@ -117,6 +148,8 @@ public class Fazpass {
                     }else{
                         status(false, "PIN not match")
                     }
+                }catch{
+                    
                 }
             }
         }
@@ -129,7 +162,8 @@ public class Fazpass {
             }
         }else{
             TrustedDevice().validatePin(pin) { validateResult in
-                validateResult.map { response in
+                do{
+                    let response = try validateResult.get()
                     if((response?.status) != nil){
                         TrustedDevice().removeDevice() { _ in
                             TrustedDevice().enrollDeviceBiometry(email, phone, pin) { _ in
@@ -140,6 +174,8 @@ public class Fazpass {
                     }else{
                         status(false, "PIN not match")
                     }
+                }catch{
+                    
                 }
             }
         }
@@ -148,6 +184,7 @@ public class Fazpass {
     
     public func validateDevice(pin: String, result:@escaping(Double, Bool, String)->()){
         TrustedDevice().validatePin(pin) { resp in
+            /*
             resp.map { t in
                 print("Validating pin .....")
                 if((t?.status) != nil){
@@ -166,13 +203,40 @@ public class Fazpass {
                     result(0, false, "Wrong PIN")
                 }
             }
+            */
+            do{
+                let t = try resp.get()
+                if((t?.status) != nil){
+                    TrustedDevice().verifyDevice { r in
+                        do{
+                            let response = try r.get()
+                            let meta: Double = response?.meta ?? 0
+                            let sim: Double = response?.sim ?? 0
+                            let location: Double = response?.location ?? 0
+                            let contact: Double = response?.contact ?? 0
+                            let key: Double = response?.key ?? 0
+                            let resume = meta + sim + location + contact + key
+                                result(resume, true, "Validation device success")
+                            
+                        }catch{
+                            result(0, true, "Something went wrong")
+                        }
+                    }
+                }else{
+                    result(0, false, "Wrong PIN")
+                }
+                
+            }catch{
+                result(0, false, "Something went wrong")
+            }
         }
         
     }
     
     public func removeDevice(pin:String, result:@escaping(Bool,String)->()){
         TrustedDevice().validatePin(pin) { resp in
-            resp.map { t in
+            do{
+                let t = try resp.get()
                 if((t?.status) != nil){
                     result(true, "Device removed")
                     TrustedDevice().removeDevice { _ in
@@ -181,6 +245,8 @@ public class Fazpass {
                 }else{
                     result(false, "Wrong PIN")
                 }
+            }catch{
+                result(false, "Something went wrong")
             }
         }
     }

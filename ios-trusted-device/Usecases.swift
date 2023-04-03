@@ -230,7 +230,6 @@ class Usecases: UsecaseProtocol {
     }
     
     func postEnroll(phone: String?, email: String?, pin: String?, isBiometry: Bool?, completion: @escaping returnGeneralResponse) {
-        let devicesCurrent = context.checkResponse?.apps?.current
         var request = TrustedDeviceRequest()
         request.address = ""
         if(context.numberOfContact==nil){
