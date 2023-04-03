@@ -9,7 +9,7 @@ target 'ios-trusted-device' do
   pod 'FirebaseMessaging',:modular_headers => true
   pod 'FirebaseCore',:modular_headers => true
   pod 'ReachabilitySwift',:modular_headers => true
-  pod 'CryptoSwift', '~> 1.7.0',:modular_headers => true
+  pod 'CryptoSwift',:modular_headers => true
   # Pods for ios-trusted-device
   target 'sample-app' do
     inherit! :search_paths

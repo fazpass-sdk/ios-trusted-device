@@ -45,8 +45,12 @@
 		B08ABFDD29D17AE500E34879 /* ios_trusted_device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08ABF7929D1508D00E34879 /* ios_trusted_device.framework */; };
 		B08ABFDE29D17AE500E34879 /* ios_trusted_device.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B08ABF7929D1508D00E34879 /* ios_trusted_device.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B08ABFEC29D193EA00E34879 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08ABFEB29D193EA00E34879 /* Status.swift */; };
+		B0A9BC7829DB132D00F287E1 /* libCryptoSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A9BC7729DB132D00F287E1 /* libCryptoSwift.a */; };
+		B0A9BC7A29DB134400F287E1 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A9BC7929DB134400F287E1 /* libFirebaseCore.a */; };
+		B0A9BC7C29DB134C00F287E1 /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A9BC7B29DB134C00F287E1 /* libFirebaseMessaging.a */; };
 		B0C4372629D2904E00ED94FB /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4372529D2904E00ED94FB /* Crypto.swift */; };
 		B0C4372829D2C71D00ED94FB /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4372729D2C71D00ED94FB /* Notification.swift */; };
+		B0F1161429DB1450000D90E7 /* libCryptoSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F1161329DB1450000D90E7 /* libCryptoSwift.a */; };
 		BBB47275E843F4E8B8B6BFC9 /* libPods-ios-trusted-device.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0665415D0EA2B4DE3555999F /* libPods-ios-trusted-device.a */; };
 /* End PBXBuildFile section */
 
@@ -118,8 +122,12 @@
 		B08ABFD629D1587100E34879 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		B08ABFD829D1728200E34879 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B08ABFEB29D193EA00E34879 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		B0A9BC7729DB132D00F287E1 /* libCryptoSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCryptoSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0A9BC7929DB134400F287E1 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0A9BC7B29DB134C00F287E1 /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C4372529D2904E00ED94FB /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		B0C4372729D2C71D00ED94FB /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		B0F1161329DB1450000D90E7 /* libCryptoSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCryptoSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9D1C7B1EF9901BFDF700E6 /* Pods-sample-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sample-app.release.xcconfig"; path = "Target Support Files/Pods-sample-app/Pods-sample-app.release.xcconfig"; sourceTree = "<group>"; };
 		E3F3204FBB349B0EAF56F53F /* Pods_sample_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sample_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EC4439BB5870B97E523481 /* Pods-ios-trusted-device.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-trusted-device.debug.xcconfig"; path = "Target Support Files/Pods-ios-trusted-device/Pods-ios-trusted-device.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,7 +138,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A9BC7829DB132D00F287E1 /* libCryptoSwift.a in Frameworks */,
 				BBB47275E843F4E8B8B6BFC9 /* libPods-ios-trusted-device.a in Frameworks */,
+				B0F1161429DB1450000D90E7 /* libCryptoSwift.a in Frameworks */,
+				B0A9BC7A29DB134400F287E1 /* libFirebaseCore.a in Frameworks */,
+				B0A9BC7C29DB134C00F287E1 /* libFirebaseMessaging.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +172,10 @@
 		28624FA85D4548EB107759D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0F1161329DB1450000D90E7 /* libCryptoSwift.a */,
+				B0A9BC7B29DB134C00F287E1 /* libFirebaseMessaging.a */,
+				B0A9BC7929DB134400F287E1 /* libFirebaseCore.a */,
+				B0A9BC7729DB132D00F287E1 /* libCryptoSwift.a */,
 				0665415D0EA2B4DE3555999F /* libPods-ios-trusted-device.a */,
 				655B65E67D024428C580044F /* libPods-sample-app.a */,
 			);

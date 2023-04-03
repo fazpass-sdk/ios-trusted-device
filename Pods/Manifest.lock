@@ -97,7 +97,7 @@ PODS:
   - ReachabilitySwift (5.0.0)
 
 DEPENDENCIES:
-  - CryptoSwift (~> 1.7.0)
+  - CryptoSwift
   - Firebase
   - FirebaseCore
   - FirebaseMessaging
@@ -134,6 +134,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
 
-PODFILE CHECKSUM: d874abadb6c50c1b3480aa329713fd18a9d0f15f
+PODFILE CHECKSUM: efa6d1ab0c16eff4b0fc3a558658047a5a7b7097
 
 COCOAPODS: 1.12.0
