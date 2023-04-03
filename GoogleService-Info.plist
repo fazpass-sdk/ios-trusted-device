@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>153172170068-qfr8g75odf8e6pv456o66iuhbtj04hml.apps.googleusercontent.com</string>
+	<string>444587746027-v5n1m1anj6svjcd43cpla7e6snudt81d.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.153172170068-qfr8g75odf8e6pv456o66iuhbtj04hml</string>
+	<string>com.googleusercontent.apps.444587746027-v5n1m1anj6svjcd43cpla7e6snudt81d</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCzAYQF7tqvpn8ZOGvtMfYLP7nTEwl8Cmw</string>
+	<string>AIzaSyDogPrP1dZkNS-gnwquknbOgK7jWx3veUM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>153172170068</string>
+	<string>444587746027</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.personal.Fazpass</string>
+	<string>com.fazpass.sample-app</string>
 	<key>PROJECT_ID</key>
-	<string>fazpass-7ffdd</string>
+	<string>trusted-device-d512e</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fazpass-7ffdd.appspot.com</string>
+	<string>trusted-device-d512e.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:153172170068:ios:7bdb56b0159d80815aa4c1</string>
+	<string>1:444587746027:ios:ea959a5c6a6bbd13b9d4ae</string>
 </dict>
 </plist>

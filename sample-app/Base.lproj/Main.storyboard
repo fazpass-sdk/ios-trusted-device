@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sample_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trusted Device Sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPa-9s-H7L">
+                                <rect key="frame" x="16" y="91" width="361" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="FmK-eO-kcF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xAF-PR-lzn">
+                                <rect key="frame" x="16" y="158" width="361" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="Sgg-oV-Rns"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHD-wD-81z">
+                                <rect key="frame" x="16" y="208" width="361" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="sjA-Ck-aOQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" textContentType="tel"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f8x-Fu-FZw">
+                                <rect key="frame" x="16" y="258" width="361" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="82F-kA-fgL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9Q-dj-ud1">
+                                <rect key="frame" x="64" y="324" width="265" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="1MV-Pl-5zs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Check">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YuO-wg-6iQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-hy-ZfC">
+                                <rect key="frame" x="64" y="375" width="265" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="vtK-y9-tie"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enroll">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="enrollAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Inb-Ze-nGc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llv-aD-qQt">
+                                <rect key="frame" x="64" y="426" width="265" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="5wu-tn-M8h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Validate">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="validateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAj-jw-NgE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCe-wN-LSV">
+                                <rect key="frame" x="64" y="477" width="265" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="eCI-vA-2Li"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Remove">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="removeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fZ-So-CDQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQY-A6-0YE">
+                                <rect key="frame" x="16" y="544" width="361" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kHD-wD-81z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0h0-PC-ci5"/>
+                            <constraint firstItem="xAF-PR-lzn" firstAttribute="top" secondItem="UPa-9s-H7L" secondAttribute="bottom" constant="32" id="26F-ba-JWN"/>
+                            <constraint firstItem="a9Q-dj-ud1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="29E-2a-xTy"/>
+                            <constraint firstItem="dcR-hy-ZfC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="4AW-Hs-HIP"/>
+                            <constraint firstItem="f8x-Fu-FZw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="50X-HR-M3a"/>
+                            <constraint firstItem="a9Q-dj-ud1" firstAttribute="top" secondItem="f8x-Fu-FZw" secondAttribute="bottom" constant="32" id="7EP-gy-0M3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f8x-Fu-FZw" secondAttribute="trailing" constant="16" id="92x-gM-twE"/>
+                            <constraint firstItem="Llv-aD-qQt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="APu-sd-E7Z"/>
+                            <constraint firstItem="Llv-aD-qQt" firstAttribute="top" secondItem="dcR-hy-ZfC" secondAttribute="bottom" constant="16" id="CPJ-Fy-VO6"/>
+                            <constraint firstItem="xAF-PR-lzn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JTp-Ip-Ao2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fQY-A6-0YE" secondAttribute="trailing" constant="16" id="JaS-7e-gfU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WCe-wN-LSV" secondAttribute="trailing" constant="64" id="OFj-2t-5Ut"/>
+                            <constraint firstItem="dcR-hy-ZfC" firstAttribute="top" secondItem="a9Q-dj-ud1" secondAttribute="bottom" constant="16" id="Ob1-7Q-Clb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a9Q-dj-ud1" secondAttribute="trailing" constant="64" id="TXP-J4-g9i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xAF-PR-lzn" secondAttribute="trailing" constant="16" id="VKY-6s-zLx"/>
+                            <constraint firstItem="UPa-9s-H7L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="VZx-6m-N0b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kHD-wD-81z" secondAttribute="trailing" constant="16" id="VaG-1P-SXS"/>
+                            <constraint firstItem="f8x-Fu-FZw" firstAttribute="top" secondItem="kHD-wD-81z" secondAttribute="bottom" constant="16" id="b5b-up-12h"/>
+                            <constraint firstItem="WCe-wN-LSV" firstAttribute="top" secondItem="Llv-aD-qQt" secondAttribute="bottom" constant="16" id="caj-9E-bSR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Llv-aD-qQt" secondAttribute="trailing" constant="64" id="cqJ-Vh-hZu"/>
+                            <constraint firstItem="fQY-A6-0YE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dV0-s6-uvC"/>
+                            <constraint firstItem="WCe-wN-LSV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="g38-er-I1G"/>
+                            <constraint firstItem="UPa-9s-H7L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="i2k-Sd-OJh"/>
+                            <constraint firstItem="fQY-A6-0YE" firstAttribute="top" secondItem="WCe-wN-LSV" secondAttribute="bottom" constant="32" id="lyB-mZ-JGx"/>
+                            <constraint firstItem="kHD-wD-81z" firstAttribute="top" secondItem="xAF-PR-lzn" secondAttribute="bottom" constant="16" id="ulh-yx-lI8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dcR-hy-ZfC" secondAttribute="trailing" constant="64" id="w4M-GW-utQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UPa-9s-H7L" secondAttribute="trailing" constant="16" id="yu0-GS-jeV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCheck" destination="a9Q-dj-ud1" id="nbX-zj-cSB"/>
+                        <outlet property="btnEnroll" destination="dcR-hy-ZfC" id="O4l-wD-Wnp"/>
+                        <outlet property="btnRemove" destination="WCe-wN-LSV" id="0Vj-DT-2VI"/>
+                        <outlet property="btnValidate" destination="Llv-aD-qQt" id="VOX-6F-oTV"/>
+                        <outlet property="edtEmail" destination="xAF-PR-lzn" id="xRr-5v-ZO8"/>
+                        <outlet property="edtPhone" destination="kHD-wD-81z" id="sAr-5j-cXP"/>
+                        <outlet property="edtPin" destination="f8x-Fu-FZw" id="2it-IX-XhA"/>
+                        <outlet property="lblResult" destination="fQY-A6-0YE" id="VlY-zY-QJF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49.618320610687022" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
