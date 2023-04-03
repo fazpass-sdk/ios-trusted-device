@@ -8,6 +8,7 @@
 import Foundation
 struct Constant {
     static let developmentUrl = "https://channa.fazpas.com"
+    static let productionUrl = "https://api.fazpas.com"
     static let version = "/v1/"
     static let applicationContext = "trusted-device/"
     
@@ -36,8 +37,8 @@ public enum TD_MODE : String {
     var baseUrlAs: String {
         switch self {
         case .DEV: return Constant.developmentUrl
-        case .STAGING: return "STAGING"
-        case .PROD: return "PROD"
+        case .STAGING: return Constant.developmentUrl
+        case .PROD: return Constant.developmentUrl
         }
     }
 }

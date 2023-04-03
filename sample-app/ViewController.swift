@@ -69,6 +69,7 @@ class ViewController: UIViewController {
         f.removeDevice(pin: _pin) { status, message in
             self.lblResult.text = "Device removed"
         }
+        
     }
 
 
