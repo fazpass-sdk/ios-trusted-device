@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ios-trusted-device"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.4"
   spec.summary      = "A CocoaPods library for implementation trusted device from fazpass"
 
   spec.description  = <<-DESC
