@@ -1,0 +1,11 @@
+framework module ios_trusted_device {
+  umbrella header "ios_trusted_device.h"
+
+  export *
+  module * { export * }
+}
+
+module ios_trusted_device.Swift {
+  header "ios_trusted_device-Swift.h"
+  requires objc
+}
