@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ios-trusted-device"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "A CocoaPods library for implementation trusted device from fazpass"
 
   spec.description  = <<-DESC
@@ -21,4 +21,6 @@ This library include some feature like;
   spec.source        = { :git => "https://github.com/fazpass-sdk/ios-trusted-device.git", :tag => "#{spec.version}" }
   spec.source_files  = "ios-trusted-device/**/*.{h,m,swift}"
 
+  spec.dependency 'CryptoSwift', '~> 1.7'
+  spec.dependency 'Firebase', '~> 9.6'
 end

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BFA38E8480744B875ECF37F /* libPods-sample-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655B65E67D024428C580044F /* libPods-sample-app.a */; };
+		B04A0BF929DB25FC0023EE5F /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B04A0BF829DB25FC0023EE5F /* FirebaseMessaging */; };
+		B04A0BFC29DB26730023EE5F /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B04A0BFB29DB26730023EE5F /* CryptoSwift */; };
 		B08ABF7E29D1508D00E34879 /* ios_trusted_device.docc in Sources */ = {isa = PBXBuildFile; fileRef = B08ABF7D29D1508D00E34879 /* ios_trusted_device.docc */; };
 		B08ABF7F29D1508D00E34879 /* ios_trusted_device.h in Headers */ = {isa = PBXBuildFile; fileRef = B08ABF7C29D1508D00E34879 /* ios_trusted_device.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B08ABF9029D1539600E34879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08ABF8F29D1539600E34879 /* AppDelegate.swift */; };
@@ -45,13 +46,7 @@
 		B08ABFDD29D17AE500E34879 /* ios_trusted_device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08ABF7929D1508D00E34879 /* ios_trusted_device.framework */; };
 		B08ABFDE29D17AE500E34879 /* ios_trusted_device.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B08ABF7929D1508D00E34879 /* ios_trusted_device.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B08ABFEC29D193EA00E34879 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08ABFEB29D193EA00E34879 /* Status.swift */; };
-		B0A9BC7829DB132D00F287E1 /* libCryptoSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A9BC7729DB132D00F287E1 /* libCryptoSwift.a */; };
-		B0A9BC7A29DB134400F287E1 /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A9BC7929DB134400F287E1 /* libFirebaseCore.a */; };
-		B0A9BC7C29DB134C00F287E1 /* libFirebaseMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A9BC7B29DB134C00F287E1 /* libFirebaseMessaging.a */; };
 		B0C4372629D2904E00ED94FB /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4372529D2904E00ED94FB /* Crypto.swift */; };
-		B0C4372829D2C71D00ED94FB /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C4372729D2C71D00ED94FB /* Notification.swift */; };
-		B0F1161429DB1450000D90E7 /* libCryptoSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F1161329DB1450000D90E7 /* libCryptoSwift.a */; };
-		BBB47275E843F4E8B8B6BFC9 /* libPods-ios-trusted-device.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0665415D0EA2B4DE3555999F /* libPods-ios-trusted-device.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,11 +74,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		004838DEB8376ADCCC126B6A /* Pods-sample-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sample-app.debug.xcconfig"; path = "Target Support Files/Pods-sample-app/Pods-sample-app.debug.xcconfig"; sourceTree = "<group>"; };
-		0665415D0EA2B4DE3555999F /* libPods-ios-trusted-device.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-trusted-device.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DBA8C0BEE22F62584C6696E /* Pods_ios_trusted_device.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_trusted_device.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F7788CB1A38D21289244397 /* Pods-ios-trusted-device.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-trusted-device.release.xcconfig"; path = "Target Support Files/Pods-ios-trusted-device/Pods-ios-trusted-device.release.xcconfig"; sourceTree = "<group>"; };
-		655B65E67D024428C580044F /* libPods-sample-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sample-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08ABF7929D1508D00E34879 /* ios_trusted_device.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_trusted_device.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08ABF7C29D1508D00E34879 /* ios_trusted_device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ios_trusted_device.h; sourceTree = "<group>"; };
 		B08ABF7D29D1508D00E34879 /* ios_trusted_device.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ios_trusted_device.docc; sourceTree = "<group>"; };
@@ -126,11 +116,7 @@
 		B0A9BC7929DB134400F287E1 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A9BC7B29DB134C00F287E1 /* libFirebaseMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseMessaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C4372529D2904E00ED94FB /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
-		B0C4372729D2C71D00ED94FB /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		B0F1161329DB1450000D90E7 /* libCryptoSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCryptoSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB9D1C7B1EF9901BFDF700E6 /* Pods-sample-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sample-app.release.xcconfig"; path = "Target Support Files/Pods-sample-app/Pods-sample-app.release.xcconfig"; sourceTree = "<group>"; };
-		E3F3204FBB349B0EAF56F53F /* Pods_sample_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sample_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1EC4439BB5870B97E523481 /* Pods-ios-trusted-device.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-trusted-device.debug.xcconfig"; path = "Target Support Files/Pods-ios-trusted-device/Pods-ios-trusted-device.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,11 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A9BC7829DB132D00F287E1 /* libCryptoSwift.a in Frameworks */,
-				BBB47275E843F4E8B8B6BFC9 /* libPods-ios-trusted-device.a in Frameworks */,
-				B0F1161429DB1450000D90E7 /* libCryptoSwift.a in Frameworks */,
-				B0A9BC7A29DB134400F287E1 /* libFirebaseCore.a in Frameworks */,
-				B0A9BC7C29DB134C00F287E1 /* libFirebaseMessaging.a in Frameworks */,
+				B04A0BF929DB25FC0023EE5F /* FirebaseMessaging in Frameworks */,
+				B04A0BFC29DB26730023EE5F /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08ABFDD29D17AE500E34879 /* ios_trusted_device.framework in Frameworks */,
-				2BFA38E8480744B875ECF37F /* libPods-sample-app.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,10 +143,6 @@
 		193D2758B1FBA58ED2E7FD3D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F1EC4439BB5870B97E523481 /* Pods-ios-trusted-device.debug.xcconfig */,
-				3F7788CB1A38D21289244397 /* Pods-ios-trusted-device.release.xcconfig */,
-				004838DEB8376ADCCC126B6A /* Pods-sample-app.debug.xcconfig */,
-				DB9D1C7B1EF9901BFDF700E6 /* Pods-sample-app.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -176,8 +154,6 @@
 				B0A9BC7B29DB134C00F287E1 /* libFirebaseMessaging.a */,
 				B0A9BC7929DB134400F287E1 /* libFirebaseCore.a */,
 				B0A9BC7729DB132D00F287E1 /* libCryptoSwift.a */,
-				0665415D0EA2B4DE3555999F /* libPods-ios-trusted-device.a */,
-				655B65E67D024428C580044F /* libPods-sample-app.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -222,7 +198,6 @@
 				B08ABFB829D1557500E34879 /* LocationManager.swift */,
 				B08ABFBA29D1559000E34879 /* MicroservicePaths.swift */,
 				B08ABFBC29D155B200E34879 /* NetworkService.swift */,
-				B0C4372729D2C71D00ED94FB /* Notification.swift */,
 				B08ABFBE29D155D500E34879 /* Parameters.swift */,
 				B08ABFC029D155EB00E34879 /* Permission.swift */,
 				B08ABFC229D1560A00E34879 /* PushNotificationManager.swift */,
@@ -258,8 +233,6 @@
 		B08ABFE929D183D500E34879 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				2DBA8C0BEE22F62584C6696E /* Pods_ios_trusted_device.framework */,
-				E3F3204FBB349B0EAF56F53F /* Pods_sample_app.framework */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -282,7 +255,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B08ABF8229D1508D00E34879 /* Build configuration list for PBXNativeTarget "ios-trusted-device" */;
 			buildPhases = (
-				5EB2D8C2E2665F3BDB1693B5 /* [CP] Check Pods Manifest.lock */,
 				B08ABF7429D1508D00E34879 /* Headers */,
 				B08ABF7529D1508D00E34879 /* Sources */,
 				B08ABF7629D1508D00E34879 /* Frameworks */,
@@ -293,6 +265,10 @@
 			dependencies = (
 			);
 			name = "ios-trusted-device";
+			packageProductDependencies = (
+				B04A0BF829DB25FC0023EE5F /* FirebaseMessaging */,
+				B04A0BFB29DB26730023EE5F /* CryptoSwift */,
+			);
 			productName = "ios-trusted-device";
 			productReference = B08ABF7929D1508D00E34879 /* ios_trusted_device.framework */;
 			productType = "com.apple.product-type.framework";
@@ -301,7 +277,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B08ABFA329D1539700E34879 /* Build configuration list for PBXNativeTarget "sample-app" */;
 			buildPhases = (
-				58E83BF8B2F2A65A3FF18A6E /* [CP] Check Pods Manifest.lock */,
 				B08ABF8929D1539600E34879 /* Sources */,
 				B08ABF8A29D1539600E34879 /* Frameworks */,
 				B08ABF8B29D1539600E34879 /* Resources */,
@@ -345,6 +320,10 @@
 				Base,
 			);
 			mainGroup = B08ABF6F29D1508D00E34879;
+			packageReferences = (
+				B04A0BF729DB25FC0023EE5F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B04A0BFA29DB26730023EE5F /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+			);
 			productRefGroup = B08ABF7A29D1508D00E34879 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -375,53 +354,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		58E83BF8B2F2A65A3FF18A6E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-sample-app-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5EB2D8C2E2665F3BDB1693B5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ios-trusted-device-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		B08ABF7529D1508D00E34879 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -448,7 +380,6 @@
 				B08ABF7E29D1508D00E34879 /* ios_trusted_device.docc in Sources */,
 				B08ABFAD29D154CC00E34879 /* ContactManager.swift in Sources */,
 				B08ABFB929D1557500E34879 /* LocationManager.swift in Sources */,
-				B0C4372829D2C71D00ED94FB /* Notification.swift in Sources */,
 				B08ABFAF29D154EB00E34879 /* Device.swift in Sources */,
 				B08ABFA729D1544B00E34879 /* CarrierManager.swift in Sources */,
 				B08ABFD529D1585B00E34879 /* User.swift in Sources */,
@@ -622,7 +553,6 @@
 		};
 		B08ABF8329D1508D00E34879 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1EC4439BB5870B97E523481 /* Pods-ios-trusted-device.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -657,7 +587,6 @@
 		};
 		B08ABF8429D1508D00E34879 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F7788CB1A38D21289244397 /* Pods-ios-trusted-device.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -691,7 +620,6 @@
 		};
 		B08ABFA129D1539700E34879 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 004838DEB8376ADCCC126B6A /* Pods-sample-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -723,7 +651,6 @@
 		};
 		B08ABFA229D1539700E34879 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB9D1C7B1EF9901BFDF700E6 /* Pods-sample-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -784,6 +711,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B04A0BF729DB25FC0023EE5F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		B04A0BFA29DB26730023EE5F /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B04A0BF829DB25FC0023EE5F /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B04A0BF729DB25FC0023EE5F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		B04A0BFB29DB26730023EE5F /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B04A0BFA29DB26730023EE5F /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B08ABF9829D1539600E34879 /* sample_app.xcdatamodeld */ = {

@@ -68,7 +68,6 @@ public class Fazpass {
     }
     
     public func check(_ email:String, _ phone: String, _ status: @escaping(TD_STATUS, CD_STATUS)->()){
-        FazpassNotification().getToken()
         TrustedDevice().checkDevice(email, phone) { res in
             res.map({ data in
                 if(data?.user==nil && data?.apps==nil){
